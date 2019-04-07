@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "font_shuomingq",
+    "texture": "59e0b4e5-6193-4418-b250-d4a2f0121bad",
+    "atlas": "34b432ef-5361-4e93-a830-b09ba85582a0",
+    "rect": [
+      877,
+      445,
+      77,
+      35
+    ],
+    "offset": [
+      -1,
+      0
+    ],
+    "originalSize": [
+      81,
+      37
+    ],
+    "rotated": 1
+  }
+}

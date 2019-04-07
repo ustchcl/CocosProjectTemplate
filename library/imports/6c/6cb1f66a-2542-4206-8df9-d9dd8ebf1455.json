@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_zhuangbeige",
+    "texture": "59e0b4e5-6193-4418-b250-d4a2f0121bad",
+    "atlas": "34b432ef-5361-4e93-a830-b09ba85582a0",
+    "rect": [
+      768,
+      584,
+      92,
+      90
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      92,
+      90
+    ],
+    "rotated": 1
+  }
+}

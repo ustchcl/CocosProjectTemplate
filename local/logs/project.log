@@ -1,0 +1,75 @@
+2019-04-07T10:12:03.934Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-07T10:12:03.938Z - normal: checking language setting...
+2019-04-07T10:12:03.938Z - normal: Language: zh
+2019-04-07T10:12:05.837Z - success: protocol editor-framework registered
+2019-04-07T10:12:05.837Z - success: protocol app registered
+2019-04-07T10:12:05.837Z - success: protocol theme registered
+2019-04-07T10:12:05.837Z - success: protocol packages registered
+2019-04-07T10:12:05.837Z - success: protocol unpack registerred
+2019-04-07T10:12:05.837Z - success: protocol disable-commonjs registerred
+2019-04-07T10:12:08.834Z - normal: failed to connect login server due to request timeout
+2019-04-07T10:12:08.835Z - normal: Check project D:\code\cocos-project\CocosProjectTemplate
+2019-04-07T10:12:08.838Z - normal: Initializing Cocos2d
+2019-04-07T10:12:09.114Z - normal: Initializing Asset Database
+2019-04-07T10:12:09.158Z - success: protocol uuid registerred
+2019-04-07T10:12:09.158Z - success: protocol db registerred
+2019-04-07T10:12:09.158Z - success: protocol thumbnail registerred
+2019-04-07T10:12:09.158Z - normal: Loading editor/builtin packages
+2019-04-07T10:12:09.181Z - success: anysdk loaded
+2019-04-07T10:12:09.329Z - success: assets loaded
+2019-04-07T10:12:09.331Z - success: builder loaded
+2019-04-07T10:12:09.334Z - success: cocos-analytics loaded
+2019-04-07T10:12:09.336Z - success: console loaded
+2019-04-07T10:12:09.379Z - success: fb-instant-games loaded
+2019-04-07T10:12:09.383Z - success: hierarchy loaded
+2019-04-07T10:12:09.385Z - success: inspector loaded
+2019-04-07T10:12:09.386Z - success: keystore loaded
+2019-04-07T10:12:09.389Z - success: node-library loaded
+2019-04-07T10:12:09.390Z - success: package-asset loaded
+2019-04-07T10:12:09.392Z - success: preferences loaded
+2019-04-07T10:12:09.394Z - success: project-exporter loaded
+2019-04-07T10:12:09.409Z - success: project-importer loaded
+2019-04-07T10:12:09.412Z - success: project-settings loaded
+2019-04-07T10:12:09.415Z - success: ui-kit loaded
+2019-04-07T10:12:09.418Z - success: ui-grid loaded
+2019-04-07T10:12:09.421Z - success: scene loaded
+2019-04-07T10:12:09.422Z - success: sprite-editor loaded
+2019-04-07T10:12:09.425Z - success: store loaded
+2019-04-07T10:12:09.429Z - success: timeline loaded
+2019-04-07T10:12:09.429Z - normal: Loading builtin packages
+2019-04-07T10:12:09.434Z - success: asset-db-debugger loaded
+2019-04-07T10:12:09.437Z - success: code-editor loaded
+2019-04-07T10:12:09.437Z - success: color-picker loaded
+2019-04-07T10:12:09.440Z - success: package-manager loaded
+2019-04-07T10:12:09.442Z - success: qqplay-adapter loaded
+2019-04-07T10:12:09.447Z - success: sdkbox loaded
+2019-04-07T10:12:09.451Z - success: tester loaded
+2019-04-07T10:12:09.452Z - success: ui-kit-preview-extra loaded
+2019-04-07T10:12:09.454Z - success: ui-kit-preview loaded
+2019-04-07T10:12:09.456Z - success: ui-tree loaded
+2019-04-07T10:12:09.456Z - success: weapp-adapter loaded
+2019-04-07T10:12:10.755Z - normal: Initializing project D:\code\cocos-project\CocosProjectTemplate
+2019-04-07T10:12:10.760Z - normal: Loading packages
+2019-04-07T10:12:10.766Z - failed: Failed to load package at C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins: Failed to load index.js: Error: Cannot find module 'C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins\index.js'
+    at Module._resolveFilename (module.js:470:15)
+    at Function.Module._resolveFilename (D:\CocosCreator\resources\electron.asar\common\reset-search-paths.js:35:12)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Async.series.a (D:\CocosCreator\resources\app.asar\editor-framework\lib\main\package.js:1:2214)
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:718:13
+    at Immediate.iterate (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:262:13)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+2019-04-07T10:12:10.766Z - normal: Watching packages
+2019-04-07T10:12:11.556Z - normal: Run Application
+2019-04-07T10:12:12.083Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/ListNode.ts.meta
+2019-04-07T10:12:12.085Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/ListScene.ts.meta
+2019-04-07T10:12:12.087Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/Random.ts.meta
+2019-04-07T10:12:12.089Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/rx-cocos.meta
+2019-04-07T10:12:12.092Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/Timer.ts.meta
+2019-04-07T10:12:12.094Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/tronbet.meta
+2019-04-07T10:12:13.067Z - success: preview server running at http://localhost:7456
+2019-04-07T10:12:19.554Z - normal: 1.9.2
+2019-04-07T10:30:45.140Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Script/basic/Example1.ts.meta
+2019-04-07T10:30:45.174Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Script/Helloworld.ts.meta

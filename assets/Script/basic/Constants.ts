@@ -1,0 +1,1 @@
+export const TOUCH_END = cc.Node.EventType.TOUCH_END;

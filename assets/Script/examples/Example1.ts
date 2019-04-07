@@ -1,14 +1,10 @@
-## 一个简单的框架
+import { Type, Unit, Fn, unit } from "../basic/Types";
+import { BehaviorSubject, Subject } from "rxjs";
+import { TOUCH_END } from "../basic/Constants";
+import { __, add, always } from "ramda"
+import { modify } from "../basic/BaseFunction";
+import { BaseComponent } from "../basic/BaseComponent";
 
-- `eval` 处理事件, 根据事件更新`state`
-- `render` 根据`state`渲染，可以由多个绑定到State里面各个Behavior上
-- `state` 明确定义的State, 内部由一个以上的BehaviorSubject构成
-- `Action` 定义该组件可能会产生的交互行为，包括
-  - UI交互 
-  - 网络请求
-  - 定时器
-
-```typescript
 const {ccclass, property} = cc._decorator
 
 interface State {
@@ -69,25 +65,3 @@ export class Example1 extends BaseComponent<State, Action> {
         }
     }
 }
-```
-
-## 定义ADT类型
-
-```typescript
-type Type<T, U> = {typeName: T, value: U}
-
-type RemoteData<Ok, Err> 
-    = Type<"NotAsked", Unit> 
-    | Type<"Loading", Unit> 
-    | Type <"Success", Ok> 
-    | Type <"Failure", Err>
-```
-
-参考Purescript/Haskell定义ADT
-```haskell
-data RemoteData e a
-  = NotAsked
-  | Loading
-  | Failure e
-  | Success a
-```
