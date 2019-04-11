@@ -1,21 +1,31 @@
 ## 一个简单的框架
 
 - `eval` 处理事件, 根据事件更新`state`
+  - 所有的逻辑，case处理，应仅有次数可以更新state
 - `render` 根据`state`渲染，可以由多个绑定到State里面各个Behavior上
 - `state` 明确定义的State, 内部由一个以上的BehaviorSubject构成
-- `Action` 定义该组件可能会产生的交互行为，包括
+- `Action` 对事件的统一抽象。需要自己定义。 定义该组件可能会产生的交互行为，包括
   - UI交互 
   - 网络请求
   - 定时器
 
 ```typescript
+import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
+import { BehaviorSubject, Subject } from "rxjs";
+import { __, add, always } from "ramda"
+import { modify } from "../basic/BaseFunction";
+import { BaseComponent } from "../basic/BaseComponent";
+
 const {ccclass, property} = cc._decorator
 
 interface State {
     count: BehaviorSubject<number>;
 }
 
-type Action = Type<"Inc", Unit> | Type<"Dec", Unit> | Type<"Set", number>
+type Action 
+    = TypeUnit<"Inc">
+    | TypeUnit<"Dec"> 
+    | Type<"Set", number>
 
 @ccclass
 export class Example1 extends BaseComponent<State, Action> {
@@ -32,14 +42,17 @@ export class Example1 extends BaseComponent<State, Action> {
 
     start () {
         this.actions = new Subject<Action>();
-        this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
-        this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
-        this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
+        // this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
+        // this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
+        // this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
+        this.onTouchEnd(this.minusButton.node, ActionUnit("Dec"));
+        this.onTouchEnd(this.plusButton.node, ActionUnit("Inc"));
+        this.onTouchEnd(this.maxButton.node, Action("Set", this.MAX_SIZE));
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.actions.subscribe(this.eval.bind(this));
-        this.state.count.subscribe(this.render.bind(this))
+        this.actions.subscribe({ next: action => this.eval(action) });
+        this.state.count.subscribe({ next: count => this.render(count)});
     }
 
     render(count: number) {
@@ -75,10 +88,11 @@ export class Example1 extends BaseComponent<State, Action> {
 
 ```typescript
 type Type<T, U> = {typeName: T, value: U}
+type TypeUnit<T> = Type<T, Unit>
 
 type RemoteData<Ok, Err> 
-    = Type<"NotAsked", Unit> 
-    | Type<"Loading", Unit> 
+    = TypeUnit<"NotAsked"> 
+    | TypeUnit<"Loading"> 
     | Type <"Success", Ok> 
     | Type <"Failure", Err>
 ```

@@ -1,6 +1,5 @@
-import { Type, Unit, unit } from "../basic/Types";
+import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
 import { BehaviorSubject, Subject } from "rxjs";
-import { TOUCH_END } from "../basic/Constants";
 import { __, add, always } from "ramda"
 import { modify } from "../basic/BaseFunction";
 import { BaseComponent } from "../basic/BaseComponent";
@@ -11,7 +10,10 @@ interface State {
     count: BehaviorSubject<number>;
 }
 
-type Action = Type<"Inc", Unit> | Type<"Dec", Unit> | Type<"Set", number>
+type Action 
+    = TypeUnit<"Inc">
+    | TypeUnit<"Dec"> 
+    | Type<"Set", number>
 
 @ccclass
 export class Example1 extends BaseComponent<State, Action> {
@@ -28,14 +30,17 @@ export class Example1 extends BaseComponent<State, Action> {
 
     start () {
         this.actions = new Subject<Action>();
-        this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
-        this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
-        this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
+        // this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
+        // this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
+        // this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
+        this.onTouchEnd(this.minusButton.node, ActionUnit("Dec"));
+        this.onTouchEnd(this.plusButton.node, ActionUnit("Inc"));
+        this.onTouchEnd(this.maxButton.node, Action("Set", this.MAX_SIZE));
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.actions.subscribe(this.eval.bind(this));
-        this.state.count.subscribe(this.render.bind(this))
+        this.actions.subscribe({ next: action => this.eval(action) });
+        this.state.count.subscribe({ next: count => this.render(count)});
     }
 
     render(count: number) {
