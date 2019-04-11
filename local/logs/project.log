@@ -1,56 +1,56 @@
-2019-04-07T10:12:03.934Z - normal: Load ~/.CocosCreator/settings.json
-2019-04-07T10:12:03.938Z - normal: checking language setting...
-2019-04-07T10:12:03.938Z - normal: Language: zh
-2019-04-07T10:12:05.837Z - success: protocol editor-framework registered
-2019-04-07T10:12:05.837Z - success: protocol app registered
-2019-04-07T10:12:05.837Z - success: protocol theme registered
-2019-04-07T10:12:05.837Z - success: protocol packages registered
-2019-04-07T10:12:05.837Z - success: protocol unpack registerred
-2019-04-07T10:12:05.837Z - success: protocol disable-commonjs registerred
-2019-04-07T10:12:08.834Z - normal: failed to connect login server due to request timeout
-2019-04-07T10:12:08.835Z - normal: Check project D:\code\cocos-project\CocosProjectTemplate
-2019-04-07T10:12:08.838Z - normal: Initializing Cocos2d
-2019-04-07T10:12:09.114Z - normal: Initializing Asset Database
-2019-04-07T10:12:09.158Z - success: protocol uuid registerred
-2019-04-07T10:12:09.158Z - success: protocol db registerred
-2019-04-07T10:12:09.158Z - success: protocol thumbnail registerred
-2019-04-07T10:12:09.158Z - normal: Loading editor/builtin packages
-2019-04-07T10:12:09.181Z - success: anysdk loaded
-2019-04-07T10:12:09.329Z - success: assets loaded
-2019-04-07T10:12:09.331Z - success: builder loaded
-2019-04-07T10:12:09.334Z - success: cocos-analytics loaded
-2019-04-07T10:12:09.336Z - success: console loaded
-2019-04-07T10:12:09.379Z - success: fb-instant-games loaded
-2019-04-07T10:12:09.383Z - success: hierarchy loaded
-2019-04-07T10:12:09.385Z - success: inspector loaded
-2019-04-07T10:12:09.386Z - success: keystore loaded
-2019-04-07T10:12:09.389Z - success: node-library loaded
-2019-04-07T10:12:09.390Z - success: package-asset loaded
-2019-04-07T10:12:09.392Z - success: preferences loaded
-2019-04-07T10:12:09.394Z - success: project-exporter loaded
-2019-04-07T10:12:09.409Z - success: project-importer loaded
-2019-04-07T10:12:09.412Z - success: project-settings loaded
-2019-04-07T10:12:09.415Z - success: ui-kit loaded
-2019-04-07T10:12:09.418Z - success: ui-grid loaded
-2019-04-07T10:12:09.421Z - success: scene loaded
-2019-04-07T10:12:09.422Z - success: sprite-editor loaded
-2019-04-07T10:12:09.425Z - success: store loaded
-2019-04-07T10:12:09.429Z - success: timeline loaded
-2019-04-07T10:12:09.429Z - normal: Loading builtin packages
-2019-04-07T10:12:09.434Z - success: asset-db-debugger loaded
-2019-04-07T10:12:09.437Z - success: code-editor loaded
-2019-04-07T10:12:09.437Z - success: color-picker loaded
-2019-04-07T10:12:09.440Z - success: package-manager loaded
-2019-04-07T10:12:09.442Z - success: qqplay-adapter loaded
-2019-04-07T10:12:09.447Z - success: sdkbox loaded
-2019-04-07T10:12:09.451Z - success: tester loaded
-2019-04-07T10:12:09.452Z - success: ui-kit-preview-extra loaded
-2019-04-07T10:12:09.454Z - success: ui-kit-preview loaded
-2019-04-07T10:12:09.456Z - success: ui-tree loaded
-2019-04-07T10:12:09.456Z - success: weapp-adapter loaded
-2019-04-07T10:12:10.755Z - normal: Initializing project D:\code\cocos-project\CocosProjectTemplate
-2019-04-07T10:12:10.760Z - normal: Loading packages
-2019-04-07T10:12:10.766Z - failed: Failed to load package at C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins: Failed to load index.js: Error: Cannot find module 'C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins\index.js'
+2019-04-11T07:14:32.454Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-11T07:14:32.459Z - normal: checking language setting...
+2019-04-11T07:14:32.459Z - normal: Language: zh
+2019-04-11T07:14:34.955Z - success: protocol editor-framework registered
+2019-04-11T07:14:34.955Z - success: protocol app registered
+2019-04-11T07:14:34.955Z - success: protocol theme registered
+2019-04-11T07:14:34.956Z - success: protocol packages registered
+2019-04-11T07:14:34.956Z - success: protocol unpack registerred
+2019-04-11T07:14:34.956Z - success: protocol disable-commonjs registerred
+2019-04-11T07:14:37.953Z - normal: failed to connect login server due to request timeout
+2019-04-11T07:14:37.954Z - normal: Check project D:\code\cocos-project\CocosProjectTemplate
+2019-04-11T07:14:37.956Z - normal: Initializing Cocos2d
+2019-04-11T07:14:38.328Z - normal: Initializing Asset Database
+2019-04-11T07:14:38.383Z - success: protocol uuid registerred
+2019-04-11T07:14:38.384Z - success: protocol db registerred
+2019-04-11T07:14:38.384Z - success: protocol thumbnail registerred
+2019-04-11T07:14:38.384Z - normal: Loading editor/builtin packages
+2019-04-11T07:14:38.405Z - success: anysdk loaded
+2019-04-11T07:14:38.537Z - success: assets loaded
+2019-04-11T07:14:38.539Z - success: builder loaded
+2019-04-11T07:14:38.543Z - success: cocos-analytics loaded
+2019-04-11T07:14:38.548Z - success: console loaded
+2019-04-11T07:14:38.593Z - success: fb-instant-games loaded
+2019-04-11T07:14:38.596Z - success: hierarchy loaded
+2019-04-11T07:14:38.601Z - success: inspector loaded
+2019-04-11T07:14:38.604Z - success: keystore loaded
+2019-04-11T07:14:38.607Z - success: node-library loaded
+2019-04-11T07:14:38.608Z - success: package-asset loaded
+2019-04-11T07:14:38.611Z - success: preferences loaded
+2019-04-11T07:14:38.612Z - success: project-exporter loaded
+2019-04-11T07:14:38.632Z - success: project-importer loaded
+2019-04-11T07:14:38.634Z - success: project-settings loaded
+2019-04-11T07:14:38.638Z - success: ui-kit loaded
+2019-04-11T07:14:38.640Z - success: ui-grid loaded
+2019-04-11T07:14:38.644Z - success: scene loaded
+2019-04-11T07:14:38.645Z - success: sprite-editor loaded
+2019-04-11T07:14:38.649Z - success: store loaded
+2019-04-11T07:14:38.654Z - success: timeline loaded
+2019-04-11T07:14:38.655Z - normal: Loading builtin packages
+2019-04-11T07:14:38.658Z - success: asset-db-debugger loaded
+2019-04-11T07:14:38.660Z - success: code-editor loaded
+2019-04-11T07:14:38.660Z - success: color-picker loaded
+2019-04-11T07:14:38.663Z - success: package-manager loaded
+2019-04-11T07:14:38.695Z - success: qqplay-adapter loaded
+2019-04-11T07:14:38.701Z - success: sdkbox loaded
+2019-04-11T07:14:38.705Z - success: tester loaded
+2019-04-11T07:14:38.707Z - success: ui-kit-preview-extra loaded
+2019-04-11T07:14:38.709Z - success: ui-kit-preview loaded
+2019-04-11T07:14:38.711Z - success: ui-tree loaded
+2019-04-11T07:14:38.711Z - success: weapp-adapter loaded
+2019-04-11T07:14:40.272Z - normal: Initializing project D:\code\cocos-project\CocosProjectTemplate
+2019-04-11T07:14:40.275Z - normal: Loading packages
+2019-04-11T07:14:40.282Z - failed: Failed to load package at C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins: Failed to load index.js: Error: Cannot find module 'C:\Users\hong\.CocosCreator\packages\CocosCreatorPlugins\index.js'
     at Module._resolveFilename (module.js:470:15)
     at Function.Module._resolveFilename (D:\CocosCreator\resources\electron.asar\common\reset-search-paths.js:35:12)
     at Function.Module._load (module.js:418:25)
@@ -61,15 +61,307 @@
     at Immediate.iterate (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:262:13)
     at runCallback (timers.js:672:20)
     at tryOnImmediate (timers.js:645:5)
-2019-04-07T10:12:10.766Z - normal: Watching packages
-2019-04-07T10:12:11.556Z - normal: Run Application
-2019-04-07T10:12:12.083Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/ListNode.ts.meta
-2019-04-07T10:12:12.085Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/ListScene.ts.meta
-2019-04-07T10:12:12.087Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/Random.ts.meta
-2019-04-07T10:12:12.089Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/rx-cocos.meta
-2019-04-07T10:12:12.092Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/Timer.ts.meta
-2019-04-07T10:12:12.094Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/tronbet.meta
-2019-04-07T10:12:13.067Z - success: preview server running at http://localhost:7456
-2019-04-07T10:12:19.554Z - normal: 1.9.2
-2019-04-07T10:30:45.140Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Script/basic/Example1.ts.meta
-2019-04-07T10:30:45.174Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Script/Helloworld.ts.meta
+2019-04-11T07:14:40.282Z - normal: Watching packages
+2019-04-11T07:14:41.425Z - normal: Run Application
+2019-04-11T07:14:42.350Z - success: preview server running at http://localhost:7456
+2019-04-11T07:14:53.892Z - normal: 1.9.2
+2019-04-11T07:51:12.548Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:51:12.550Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:51:12.552Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:51:12.553Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:51:12.554Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:54:04.567Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:54:04.569Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:54:04.569Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:54:04.571Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T07:54:04.573Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:23:58.592Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:23:58.595Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:23:58.596Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:23:58.597Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:23:58.598Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:07.535Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:07.547Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:07.548Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:07.548Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:07.548Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:48.152Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:48.153Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:48.153Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:48.153Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:25:48.154Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:29:16.287Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:29:16.289Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:29:16.291Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:29:16.292Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:29:16.293Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:33:22.046Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:33:22.048Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:33:22.048Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:33:22.048Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:33:22.049Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:34:48.297Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:34:48.299Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:34:48.299Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:34:48.299Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:34:48.309Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:37:13.767Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:37:13.770Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:37:13.770Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:37:13.771Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:37:13.773Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:38:29.483Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:38:29.485Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:38:29.485Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:38:29.486Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:38:29.488Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:39:46.368Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:39:46.394Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:39:46.394Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:39:46.394Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:39:46.395Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:40:51.158Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/填空/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:40:51.159Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/选择/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:40:51.160Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:40:51.160Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/menu/连线/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+
+2019-04-11T08:40:51.160Z - warn: The Asset used by component "cc.Label" in prefab "singleChoiceQuestion.prefab" is missing. Detailed information:
+Node path: "singleChoiceQuestion/下一题/填空题"
+Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
+Missing uuid: "76b5a693-4d91-49cc-8faf-b5ad2dee38ca"
+

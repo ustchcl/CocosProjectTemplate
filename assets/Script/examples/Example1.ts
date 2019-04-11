@@ -1,4 +1,4 @@
-import { Type, Unit, Fn, unit } from "../basic/Types";
+import { Type, Unit, unit } from "../basic/Types";
 import { BehaviorSubject, Subject } from "rxjs";
 import { TOUCH_END } from "../basic/Constants";
 import { __, add, always } from "ramda"

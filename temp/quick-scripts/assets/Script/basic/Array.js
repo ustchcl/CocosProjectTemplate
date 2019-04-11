@@ -4,6 +4,7 @@ cc._RF.push(module, '310ce4fT5pPh5Fi60i3qm7P', 'Array', __filename);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var Maybe_1 = require("./Maybe");
+var R = require("ramda");
 /**
  * 在指定位置数组尾部放入一个的新的元素，并返回修改后的数组
  * 内部是用`splice`实现
@@ -85,6 +86,27 @@ function swap(arr, index1, index2) {
 }
 exports.swap = swap;
 // function 
+/**
+ * 将数组的元素随机重新排列
+ */
+function shuffle(array) {
+    var length = array.length;
+    for (var i = length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        _a = [array[j], array[i]], array[i] = _a[0], array[j] = _a[1];
+    }
+    return array;
+    var _a;
+}
+exports.shuffle = shuffle;
+/**
+ * sample 从数组中抽取出指定数量的元素
+ */
+function sample(n, arr) {
+    n = Math.max(Math.min(n, arr.length), 0);
+    return R.take(n, shuffle(R.clone(arr)));
+}
+exports.sample = sample;
 
 cc._RF.pop();
         }

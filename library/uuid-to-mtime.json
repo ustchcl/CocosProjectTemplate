@@ -225,7 +225,7 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "3254504e-37eb-408c-893c-5851f5e2c4e9": {
-    "asset": 1554620376667,
+    "asset": 1554969068421,
     "meta": 1554620376665,
     "relativePath": "prefab"
   },
@@ -235,7 +235,7 @@
     "relativePath": "prefab\\listNode.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1554620376632,
+    "asset": 1554712043300,
     "meta": 1554620376627,
     "relativePath": "Scene"
   },
@@ -244,40 +244,15 @@
     "meta": 1554631932138,
     "relativePath": "prefab\\关闭按钮.prefab"
   },
-  "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1554620376628,
-    "meta": 1554631932144,
-    "relativePath": "Scene\\helloworld.fire"
-  },
-  "ecc01667-98be-41c4-9d08-8ca0c8ad6caa": {
-    "asset": 1554620376630,
-    "meta": 1554631932145,
-    "relativePath": "Scene\\rx-list.fire"
-  },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1554631932095,
+    "asset": 1554722320729,
     "meta": 1554620376632,
     "relativePath": "Script"
   },
   "e1f74163-0af2-4dc1-b656-96260bdff1b2": {
-    "asset": 1554631932047,
+    "asset": 1554899149920,
     "meta": 1554631932037,
     "relativePath": "Script\\basic"
-  },
-  "310cee1f-4f9a-4f87-9162-eb48b7aa6ecf": {
-    "asset": 1554630936981,
-    "meta": 1554631932331,
-    "relativePath": "Script\\basic\\Array.ts"
-  },
-  "0c6ca87f-9d25-4555-836d-1eb090a3e655": {
-    "asset": 1554620376631,
-    "meta": 1554631932379,
-    "relativePath": "Scene\\tronbet.fire"
-  },
-  "419bf5b8-94f7-4c39-9dd5-cc1937051c56": {
-    "asset": 1554630727474,
-    "meta": 1554631932388,
-    "relativePath": "Script\\basic\\BaseFunction.ts"
   },
   "0b9efd7e-7dcd-48b1-a722-f696ec48c5f6": {
     "asset": 1554627494497,
@@ -293,11 +268,6 @@
     "asset": 1554630944960,
     "meta": 1554631932556,
     "relativePath": "Script\\basic\\Stack.ts"
-  },
-  "c28a3bd1-831f-46b3-b0c8-68a8888d3706": {
-    "asset": 1554630877792,
-    "meta": 1554631932566,
-    "relativePath": "Script\\basic\\Types.ts"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
     "asset": 1554620376664,
@@ -330,14 +300,9 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "2f93079d-776d-4e34-9c6f-d672136b9531": {
-    "asset": 1554633171095,
-    "meta": 1554633171164,
+    "asset": 1554711507499,
+    "meta": 1554711507507,
     "relativePath": "Scene\\example.fire"
-  },
-  "d3bdfefd-79c4-4551-8527-05248bf46f08": {
-    "asset": 1554632952889,
-    "meta": 1554633007888,
-    "relativePath": "Script\\basic\\BaseComponent.ts"
   },
   "1ee21ba1-fd41-4f52-b2df-645f0a52aa92": {
     "asset": 1554633045215,
@@ -345,13 +310,143 @@
     "relativePath": "Script\\examples"
   },
   "8661c2bc-af31-498b-a25a-cf2d9bac0277": {
-    "asset": 1554632766198,
-    "meta": 1554633056951,
+    "asset": 1554881800769,
+    "meta": 1554884288501,
     "relativePath": "Script\\basic\\Component.ts"
   },
   "3b8d6b21-b1b3-4c17-9492-9b147adeba94": {
-    "asset": 1554633130099,
-    "meta": 1554633137662,
+    "asset": 1554634845280,
+    "meta": 1554634850435,
     "relativePath": "Script\\examples\\Example1.ts"
+  },
+  "1b9c44e9-02d1-4aa9-8a31-5dd1c320ca76": {
+    "asset": 1554634086383,
+    "meta": 1554634850439,
+    "relativePath": "Script\\basic\\RemoteData.ts"
+  },
+  "55a928ee-1bb0-41d7-8c4f-ce8d7f052f83": {
+    "asset": 1554969061615,
+    "meta": 1554969061637,
+    "relativePath": "Scene\\studio.fire"
+  },
+  "d4b314dd-09ac-4d51-83fc-5baf1f69a00d": {
+    "asset": 1554885952377,
+    "meta": 1554713051933,
+    "relativePath": "font"
+  },
+  "d437c7b9-e4e0-4ff0-a1a9-7226bae66d1d": {
+    "asset": 1554899149925,
+    "meta": 1554722320730,
+    "relativePath": "Script\\core"
+  },
+  "4ac72242-2f8b-4480-b1ff-9806698dc33e": {
+    "asset": 1554899149923,
+    "meta": 1554794653827,
+    "relativePath": "Script\\core\\config"
+  },
+  "310cee1f-4f9a-4f87-9162-eb48b7aa6ecf": {
+    "asset": 1554954447933,
+    "meta": 1554956457681,
+    "relativePath": "Script\\basic\\Array.ts"
+  },
+  "419bf5b8-94f7-4c39-9dd5-cc1937051c56": {
+    "asset": 1554869374247,
+    "meta": 1554884288486,
+    "relativePath": "Script\\basic\\BaseFunction.ts"
+  },
+  "308040a9-ff3d-49f6-807f-1436b25a3208": {
+    "asset": 1554869382824,
+    "meta": 1554884288678,
+    "relativePath": "Script\\core\\config\\Config.ts"
+  },
+  "78c01fc5-efc9-4111-9982-e2e3022756c1": {
+    "asset": 1554883818162,
+    "meta": 1554884288521,
+    "relativePath": "Script\\basic\\GlobalEnv.ts"
+  },
+  "ca99bb46-c3fc-4423-b2f9-f190565b4b12": {
+    "asset": 1554865883017,
+    "meta": 1554884288535,
+    "relativePath": "Script\\basic\\Singleton.ts"
+  },
+  "f5771377-ccfb-4812-9f19-c1232a3e8fa3": {
+    "asset": 1554883803091,
+    "meta": 1554884288766,
+    "relativePath": "Script\\core\\GlobalAction.ts"
+  },
+  "ddfae9d6-c41d-435d-9247-b6b78d60f75d": {
+    "asset": 1554871669547,
+    "meta": 1554884288810,
+    "relativePath": "Script\\core\\QuestionLib.ts"
+  },
+  "b17b12af-8220-419a-b094-5c6efd9ea028": {
+    "asset": 1554885061220,
+    "meta": 1554885061245,
+    "relativePath": "prefab\\singleChoiceQuestion.prefab"
+  },
+  "1c57e212-4bc7-4478-aa94-203ac63c2ccb": {
+    "asset": 1554953554585,
+    "meta": 1554956457864,
+    "relativePath": "Script\\core\\ExaminationData.ts"
+  },
+  "e8bca384-b2fe-48d8-b00d-0c8e3a78980e": {
+    "asset": 1497561443675,
+    "meta": 1554885952378,
+    "relativePath": "font\\Selphia.otf"
+  },
+  "c28a3bd1-831f-46b3-b0c8-68a8888d3706": {
+    "asset": 1554890764614,
+    "meta": 1554899150115,
+    "relativePath": "Script\\basic\\Types.ts"
+  },
+  "9777874c-b625-44ee-a294-c28e2bf3635e": {
+    "asset": 1554904086222,
+    "meta": 1554956457682,
+    "relativePath": "Script\\basic\\ConfigToInterface.ts"
+  },
+  "7fa86b7d-6d36-4836-ad2d-8f396cc2dd73": {
+    "asset": 1554958977704,
+    "meta": 1554959030698,
+    "relativePath": "Script\\basic\\Utils.ts"
+  },
+  "10118a57-b03b-4f3b-9894-c0e9da402c46": {
+    "asset": 1554967521569,
+    "meta": 1554967524810,
+    "relativePath": "Script\\core\\config\\FillTheBlankConfig.ts"
+  },
+  "8c9a9873-37d9-4fd8-b229-0bad42fb46cd": {
+    "asset": 1554968016870,
+    "meta": 1554968457724,
+    "relativePath": "Script\\core\\config\\ConfigUtils.ts"
+  },
+  "cb5b2d5a-d00e-447b-bee9-481d175852bb": {
+    "asset": 1554969068414,
+    "meta": 1554969068421,
+    "relativePath": "prefab\\fillTheBlank.prefab"
+  },
+  "58cb4192-79bd-44ae-a4be-212efb475089": {
+    "asset": 1554971143559,
+    "meta": 1554971145854,
+    "relativePath": "Script\\core\\ExaminationPanel.ts"
+  },
+  "d3bdfefd-79c4-4551-8527-05248bf46f08": {
+    "asset": 1554971678294,
+    "meta": 1554971831554,
+    "relativePath": "Script\\basic\\BaseComponent.ts"
+  },
+  "18bc356a-4615-407a-beff-08a1b1d3d761": {
+    "asset": 1554971905839,
+    "meta": 1554971906765,
+    "relativePath": "Script\\core\\SingleChoiceQuestionPanel.ts"
+  },
+  "4d595b55-fa9b-41a7-8856-f2a598887e44": {
+    "asset": 1554972091019,
+    "meta": 1554972091035,
+    "relativePath": "Scene\\main.fire"
+  },
+  "7621dd3e-2f9f-40fb-9912-7bd1c965eba5": {
+    "asset": 1554971969056,
+    "meta": 1554972048746,
+    "relativePath": "Script\\core\\FillTheBlank.ts"
   }
 }

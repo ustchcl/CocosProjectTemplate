@@ -1,5 +1,6 @@
 import { Maybe } from "./Maybe";
-
+import * as R from "ramda"
+import { random } from "./Utils";
 
 /**
  * 在指定位置数组尾部放入一个的新的元素，并返回修改后的数组
@@ -82,3 +83,24 @@ export function swap<T>(arr: Array<T>, index1: number, index2: number): Array<T>
 }
 
 // function 
+
+/**
+ * 将数组的元素随机重新排列
+ */
+export function shuffle<T>(array: Array<T>): Array<T> {
+    let length = array.length;
+    for (let i = length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+
+/**
+ * sample 从数组中抽取出指定数量的元素
+ */
+export function sample<T>(n: number, arr: Array<T>): Array<T> {
+    n = Math.max(Math.min(n, arr.length), 0);
+    return R.take(n, shuffle(R.clone(arr)));
+}
