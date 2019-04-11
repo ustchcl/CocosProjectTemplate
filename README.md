@@ -1,5 +1,7 @@
 ## 一个简单的框架
 
+仿照Elm, Halogen那样抽象事件，数据和渲染。
+
 - `eval` 处理事件, 根据事件更新`state`
   - 所有的逻辑，case处理，应仅有次数可以更新state
 - `render` 根据`state`渲染，可以由多个绑定到State里面各个Behavior上
@@ -8,6 +10,38 @@
   - UI交互 
   - 网络请求
   - 定时器
+
+```elm
+import Browser
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
+
+main =
+  Browser.sandbox { init = init, update = update, view = view }
+
+type Msg = Increment | Decrement
+
+type alias Model = Int  -- state
+
+init : Model
+init = 0
+
+update msg model =      -- eval
+  case msg of
+    Increment ->
+      model + 1
+
+    Decrement ->
+      model - 1
+
+view model =            -- render
+  div []
+    [ button [ onClick Decrement ] [ text "-" ]
+    , div [] [ text (String.fromInt model) ]
+    , button [ onClick Increment ] [ text "+" ]
+    ]
+```
+
 
 ```typescript
 import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
