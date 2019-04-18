@@ -138,4 +138,75 @@ data RemoteData e a
   | Loading
   | Failure e
   | Success a
+``` 
+ 
+## Cocos Creator V2.0 以上的 Shader
+首先一个cocos creator(version >= 2.0) 用的shader类型如下
+```Typescript
+
+interface Shader {
+    name: string,
+    defines: Array<{ name : string }>,
+    vert: string,
+    frag: string,
+}
+
+const DefaultVert: string  = 
+`
+uniform mat4 viewProj;
+uniform mat4 model;
+attribute vec3 a_position;
+attribute vec2 a_uv0;
+varying vec2 uv0;
+void main () {
+    mat4 mvp;
+    mvp = viewProj * model;
+    vec4 pos = mvp * vec4(a_position, 1);
+    gl_Position = pos;
+    uv0 = a_uv0;
+}
+`
+
+
+```
+
+fragmentShader与shadetoy上不一样的地方有
+首先，shader的输入变量如下： 可自行定义，需要在glsl中修改
+```typescript
+let mainTech = new renderer.Technique(
+    ['transparent'],
+    [
+        { name: 'texture', type: renderer.PARAM_TEXTURE_2D },   // 纹理 iChannel0, shadertoy上使用iChannel0的地方请替换为texture
+        { name: 'color', type: renderer.PARAM_COLOR4 },         // 当前的颜色值
+        { name: 'pos', type: renderer.PARAM_FLOAT3 },           // iResolution
+        { name: 'size', type: renderer.PARAM_FLOAT2 },          // size, 可用来计算fragCoord
+        { name: 'time', type: renderer.PARAM_FLOAT },           // iTime
+        { name: 'num', type: renderer.PARAM_FLOAT }             
+    ],
+    [pass]
+);
+```
+
+其次  
+```glsl
+// 开头的变量声明， 变量名字可以使用shadertoy的着色器输入变量，不过在ShaderMaterial中需修改
+// 其mainTech对应的值
+uniform sampler2D texture;
+uniform vec3 pos;
+uniform float time;
+uniform vec2 size;
+varying vec2 uv0; // 这个是额外的变量， 用于计算fragCorrd, 应该是引擎传入的当前坐标的相关信息;
+```
+
+最后  
+```glsl
+void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
+    // code
+}
+
+void main() {
+    // 首先要先计算出所使用的fragCoord
+    vec2 fragCoord = vec2(uv0.x * size.x - 0.5 * size.x, 0.5 * size.y - uv0.y * size.y);
+    // code
+}
 ```
