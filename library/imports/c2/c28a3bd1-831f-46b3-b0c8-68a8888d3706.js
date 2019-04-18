@@ -12,5 +12,9 @@ function ActionUnit(typeName) {
     return { typeName: typeName, value: exports.unit };
 }
 exports.ActionUnit = ActionUnit;
+function mkPair(fst, snd) {
+    return { fst: fst, snd: snd };
+}
+exports.mkPair = mkPair;
 
 cc._RF.pop();

@@ -37,3 +37,43 @@ export function textToRichText(text: string): string {
     text = text.replace(pattern, "<color=#$1>")
     return text;
 }
+
+
+/**
+ * localToGlobal
+ * 获取节点在全局的左边点
+ */
+export function globalPosition(node: cc.Node): cc.Vec2 {
+    let result = new cc.Vec2(0, 0);
+    // node.convertToWorldSpace
+
+    return result;
+}
+
+// position 运算
+export function addVec2(v1: cc.Vec2,) {
+    return (v2: cc.Vec2): cc.Vec2 => {
+        return new cc.Vec2(v1.x + v2.x, v1.y + v2.y);
+    }
+}
+
+export function mutilVec2(scale: number) {
+    return (v: cc.Vec2): cc.Vec2 => {
+        return new cc.Vec2(v.x * scale, v.y * scale);
+    }
+}
+
+export function distance(v1: cc.Vec2) {
+    let func = x => x * x;
+    return (v2: cc.Vec2): number => {
+        return Math.sqrt(func(v1.x - v2.x) + func(v1.y - v2.y));
+    }
+}
+
+type PolarPosition = { r: number, theta: number }
+
+export function toPolar(p: cc.Vec2): PolarPosition {
+    let r = distance(p)(cc.Vec2.ZERO);
+    let theta = Math.atan2(p.y, p.x);
+    return {r: r, theta: theta};
+}

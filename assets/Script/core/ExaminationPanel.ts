@@ -1,12 +1,14 @@
 import { BaseComponent } from "../basic/BaseComponent";
 import { Type, Unit, unit, ActionUnit, TypeUnit } from "../basic/Types";
 import * as Rx from "rxjs"
+import * as R from "ramda"
 import { map, filter } from 'rxjs/operators'
 import SingleChoiceQuestionPanel from "./SingleChoiceQuestionPanel";
 import { GlobalEnv } from "../basic/GlobalEnv";
 import { GlobalAction } from "./GlobalAction";
 import FillTheBlank from "./FillTheBlank";
 import { modify } from "../basic/BaseFunction";
+import ConnectionQuestion from "./ConnectionQuestion";
 
 /**
  * Copyright  : (C) Chenglin Huang 2019
@@ -22,10 +24,11 @@ type Action
     | TypeUnit<"Switch">
     | GlobalAction
 
-type QuestionType = "Choice" | "Blank"
+type QuestionType = "Choice" | "Blank" | "Connection"
 type State = {
     time: Rx.BehaviorSubject<number>,
-    questionType: Rx.BehaviorSubject<QuestionType>
+    questionType: Rx.BehaviorSubject<QuestionType>,
+    result: Rx.BehaviorSubject<string>;
 }
 
 @ccclass
@@ -34,12 +37,16 @@ export default class ExaminationPanel extends BaseComponent<State, Action> {
     scq: SingleChoiceQuestionPanel = null;
     @property(FillTheBlank)
     fillTheBlank: FillTheBlank = null;
+    @property(ConnectionQuestion)
+    connectQuestion: ConnectionQuestion = null;
     @property(cc.Button)
     resetButton: cc.Button = null;
     @property(cc.Label)
     swicthLabel: cc.Label = null;
     @property(cc.Button)
     switchButton: cc.Button = null;
+    @property(cc.Label)
+    resultLabel: cc.Label = null;
 
 
     start () {
@@ -48,14 +55,16 @@ export default class ExaminationPanel extends BaseComponent<State, Action> {
 
         this.state = {
             time: new Rx.BehaviorSubject<number>(1000),
-            questionType: new Rx.BehaviorSubject("Choice")
+            questionType: new Rx.BehaviorSubject("Choice"),
+            result: new Rx.BehaviorSubject("")
         };
         this.state.time.subscribe({ next: state => this.render(state) });
         this.state.questionType.subscribe({next: type => this.renderQuestionType(type)})
+        this.state.result.subscribe({ next: result => this.renderResult(result) })
         GlobalEnv.getInstance().globalActions.pipe(
             filter(x => 
-                x.typeName == "SingleChoiceQuestion_Over" || 
-                x.typeName == "FillTheBlankQuestion_Over"
+                x.typeName == "ShowMsg" ||
+                x.typeName == "ShowResult"
             )
         ).subscribe({ next: action => this.eval(action) });
 
@@ -76,24 +85,48 @@ export default class ExaminationPanel extends BaseComponent<State, Action> {
                         this.fillTheBlank.fork(ActionUnit("Initialize"));
                         break;
                     }
+                    case "Connection": {
+                        this.connectQuestion.fork(ActionUnit("Initialize"));
+                    }
                 }
-                
+                modify(this.state.result, R.always(""))
                 break;
             }
             case "ShowScore": {
                 break;
             }
             case "Switch": {
-                modify(this.state.questionType, t => t == "Choice" ? "Blank" : "Choice");
+                modify(this.state.questionType, t => {
+                    switch (t) {
+                        case "Choice": return "Blank";
+                        case "Blank": return "Connection";
+                        case "Connection": return "Choice";
+                    }
+                });
                 this.fork(ActionUnit("Reset"));
                 break;
             }
-            case "SingleChoiceQuestion_Over": {
-                console.log("I see");
+            // case "SingleChoiceQuestion_Over": {
+            //     console.log("I see");
+            //     modify(this.state.result, R.always("单选题结束"));
+            //     break;
+            // }
+            // case "FillTheBlankQuestion_Over": {
+            //     modify(this.state.result, R.always("填空题结束"));
+            //     break;
+            // }
+            // case "ConnectionQuestion_Over": {
+            //     modify(this.state.result, R.always("连线题结束"));
+            //     break;
+            // }
+            case "ShowResult": {
+                let value = action.value;
+                modify(this.state.result, R.always(`${value}`));
                 break;
             }
-            case "FillTheBlankQuestion_Over": {
-                console.log("填空题结束了");
+            case "ShowMsg": {
+                let value = action.value;
+                modify(this.state.result, R.always(value));
                 break;
             }
         }
@@ -104,15 +137,28 @@ export default class ExaminationPanel extends BaseComponent<State, Action> {
             case "Choice": {
                 this.scq.node.active = true;
                 this.fillTheBlank.node.active = false;
+                this.connectQuestion.node.active = false;
                 this.swicthLabel.string = "切换到填空题";
                 break;
             }
             case "Blank": {
                 this.scq.node.active = false;
                 this.fillTheBlank.node.active = true;
+                this.swicthLabel.string = "切换到连线题";
+                this.connectQuestion.node.active = false;
+                break;
+            }
+            case "Connection": {
+                this.scq.node.active = false;
+                this.fillTheBlank.node.active = false;
                 this.swicthLabel.string = "切换到选择题";
+                this.connectQuestion.node.active = true;
                 break;
             }
         }
+    }
+
+    renderResult(result: string) {
+        this.resultLabel.string = result;
     }
 }

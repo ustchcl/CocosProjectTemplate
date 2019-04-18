@@ -7,6 +7,8 @@ import { modify } from "../basic/BaseFunction";
 import { Examination } from "./ExaminationData";
 import * as R from "ramda"
 import { Maybe } from "../basic/Maybe";
+import { GlobalEnv } from "../basic/GlobalEnv";
+import { ResUtils } from "./res/ResUtils";
 
 /**
  * Copyright  : (C) Chenglin Huang 2019
@@ -38,6 +40,8 @@ export default class SingleChoiceQuestionPanel extends BaseComponent<State, Acti
     selections: Array<cc.Button> = [];
     @property(cc.Button)
     nextButton: cc.Button = null;
+    @property(cc.Sprite)
+    bgSprite: cc.Sprite = null;
 
     start () {
         this.actions = new Subject<Action>();
@@ -54,14 +58,15 @@ export default class SingleChoiceQuestionPanel extends BaseComponent<State, Acti
         question.selections.forEach((content, index) => {
             this.selections[index].getComponentInChildren(cc.Label).string = content.replace('\n', '\n\n');
         });
+        ResUtils.setSprite(this.bgSprite, question.spriteId);
     }
 
     renderSelected(selectIndex: Maybe<number>) {
-        this.selections.forEach(btn => btn.node.color = cc.hexToColor('#ffffff'));
+        this.selections.forEach(btn => btn.node.color = new cc.Color().fromHEX('#ffffff'));
         if (selectIndex.valid) {
             this.selections.forEach((btn, index) => {
                 if (index == selectIndex.val) {
-                    btn.node.color = cc.hexToColor('#7E7A7A')
+                    btn.node.color = new cc.Color().fromHEX('#7E7A7A')
                 }
             });
         }
@@ -91,11 +96,14 @@ export default class SingleChoiceQuestionPanel extends BaseComponent<State, Acti
                 break;
             }
             case "Next": {
+                let result = "";
                 if (this.state.selectedIndex.value.map(x => x == this.state.question.value.answerIndex).getOrElse(false)) {
-                    console.debug("恭喜你，答对了");
+                    result = "恭喜你，答对了";
                 } else {
-                    console.error("答错了 o(╥﹏╥)o")
+                    let answer = this.state.question.value.selections[this.state.question.value.answerIndex];
+                    result = "答错了 o(╥﹏╥)o, 正确答案为 " + answer;
                 }
+                GlobalEnv.getInstance().dispatchAction(Action("ShowResult", result))
                 let nextQuestion = Examination.getInstance().singleChoiceQuestions.next();
                 if (nextQuestion.valid) {
                     modify(this.state.selectedIndex, R.always(Maybe.Nothing()))

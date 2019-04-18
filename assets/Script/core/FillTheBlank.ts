@@ -6,6 +6,8 @@ import { ConfigUtils } from "./config/ConfigUtils";
 import { Examination } from "./ExaminationData";
 import { modify } from "../basic/BaseFunction";
 import { textToRichText } from "../basic/Utils";
+import { GlobalEnv } from "../basic/GlobalEnv";
+import { ResUtils } from "./res/ResUtils";
 /**
  * Copyright  : (C) Chenglin Huang 2019
  * Maintainer : Chenglin Huang <ustchcl@gmail.com>
@@ -40,6 +42,8 @@ export default class FillTheBlank extends BaseComponent<State, Action> {
     selectedLabels: Array<cc.Label> = [];
     @property([cc.Node])
     selectedNodes: Array<cc.Node> = [];
+    @property(cc.Sprite)
+    bgSprite: cc.Sprite = null;
 
     start () {
         this.actions = new Rx.Subject<Action>();
@@ -75,9 +79,9 @@ export default class FillTheBlank extends BaseComponent<State, Action> {
                 let wordAmount = this.state.question.getValue().wordAmount;
                 if (selectedWords.map(R.prop("index")).indexOf(value) != -1) {
                     modify(this.state.selectedWords, R.identity);
-                    console.error("已选择该选项");
+                    GlobalEnv.getInstance().dispatchAction(Action("ShowMsg", "已选择该选项"));
                 } else if (selectedWords.length >= wordAmount) {
-                    console.error("无可用之空");
+                    GlobalEnv.getInstance().dispatchAction(Action("ShowMsg", "无可用之空"));
                 } else {
                     modify(this.state.selectedWords, R.append({word: this.state.question.getValue().words[value], index: value}))
                 }
@@ -90,17 +94,17 @@ export default class FillTheBlank extends BaseComponent<State, Action> {
             case "Next": {
                 let yourAnwser = this.state.selectedWords.getValue().map(R.prop("word"));
                 if (yourAnwser.length < this.state.question.getValue().wordAmount) {
-                    console.error("还没有填完")
+                    GlobalEnv.getInstance().dispatchAction(Action("ShowMsg", "还没有填完"));
                     break;
                 }
+                let result = "";
                 let rightAnwser = this.state.question.getValue().anwsers;
                 if (R.equals(rightAnwser, yourAnwser)) {
-                    console.debug("恭喜你，答对了");
+                    result = "恭喜你，答对了";
                 } else {
-                    console.error("答错了 o(╥﹏╥)o");
-                    console.log("你的答案", yourAnwser);
-                    console.log("正确答案", rightAnwser);
+                    result = "答错了 o(╥﹏╥)o" + "\n你的答案: " + JSON.stringify(yourAnwser) + "\n正确答案:" + JSON.stringify(rightAnwser);
                 }
+                GlobalEnv.getInstance().dispatchAction(Action("ShowResult", result));
                 let nextQuestion = Examination.getInstance().fillTheBlankQuestions.next();
                 if (nextQuestion.valid) {
                     modify(this.state.selectedWords, R.always([]));
@@ -118,7 +122,7 @@ export default class FillTheBlank extends BaseComponent<State, Action> {
         }
     }
 
-    renderQuestion (question: Question) {
+    async renderQuestion (question: Question) {
         let words = question.words;
         this.wordButtons.forEach((btn, index) => {
             let active = index < words.length;
@@ -132,13 +136,14 @@ export default class FillTheBlank extends BaseComponent<State, Action> {
             console.error(question);
         }
         this.titleRichText.string = textToRichText(question.description.replace('\n', '<br/><br/>'));
+        ResUtils.setSprite(this.bgSprite, question.spriteId);
     }
 
     renderSelected(selectedWords: Array<{word: string, index: number}>) {
-        this.wordButtons.forEach(btn => btn.node.color = cc.hexToColor('#ffffff'));
+        this.wordButtons.forEach(btn => btn.node.color = new cc.Color().fromHEX('#ffffff'));
         this.selectedLabels.forEach(label => label.string = "");
         selectedWords.forEach((info, index) => {
-            this.wordButtons[info.index].node.color = cc.hexToColor('#7E7A7A');
+            this.wordButtons[info.index].node.color = new cc.Color().fromHEX('#7E7A7A');
             this.selectedLabels[index].string = info.word;
         });
     }

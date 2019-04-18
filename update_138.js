@@ -12,7 +12,7 @@ function system(command) {
     });
 }
 
-const CC_BIN = 'D:/CocosCreator/CocosCreator.exe';
+const CC_BIN = 'C:/CocosCreator/CocosCreator.exe';
 
 async function update() {
     console.log(clc.red('start update...\nstart building...'));
@@ -36,7 +36,8 @@ async function update() {
     console.log(clc.green('zip successfully.'))
     console.log(clc.red('start uploading...'))
     // upload
-    await system('scp build/web-mobile/web-mobile.zip root@192.168.0.138:/yt/mgxy-server-kit/apache-tomcat-8.0.24/webapps/chinglish.war')
+    console.log('scp build/web-mobile/web-mobile.zip root@192.168.0.138:/yt/mgxy-server-kit/apache-tomcat-8.0.24/webapps/chinglish.war')
+    console.log("scp build/web-mobile/web-mobile.zip root@120.25.124.141:/usr/local/games/apache-tomcat-ytclient/webapps/chinglish.war")
     console.log(clc.green('upload successfully.\nupdate complete!'))
 }
 

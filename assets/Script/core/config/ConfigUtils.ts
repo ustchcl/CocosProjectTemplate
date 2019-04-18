@@ -1,11 +1,11 @@
 import { shuffle } from "../../basic/Array";
-import * as R from "ramda"
+import * as R from "ramda";
+import { Pair } from "../../basic/Types";
 
 export module ConfigUtils {
     /**
      * 选择题 配置转换
      */
-
 
     export interface SelectionQuestionSource {
         picture: number;
@@ -33,7 +33,7 @@ export module ConfigUtils {
 
     export interface SingleChoiceQuestion {
         id: number;
-        imageId: number;
+        spriteId: number;
         description: string;
         selections: Array<string>;
         answerIndex: number;
@@ -41,7 +41,9 @@ export module ConfigUtils {
         attributes: Attributes;
     }
 
-    export function convertSingleChoiceQuestion(sourceInfo: SelectionQuestionSource): SingleChoiceQuestion {
+    export function convertSingleChoiceQuestion(
+        sourceInfo: SelectionQuestionSource
+    ): SingleChoiceQuestion {
         let selections = shuffle([
             sourceInfo.optionOne,
             sourceInfo.optionTwo,
@@ -51,7 +53,7 @@ export module ConfigUtils {
         let answer = sourceInfo.optionOne;
         return {
             id: sourceInfo.id,
-            imageId: sourceInfo.picture,
+            spriteId: sourceInfo.picture,
             description: sourceInfo.description,
             selections: selections,
             answerIndex: Math.max(selections.indexOf(answer), 0),
@@ -61,9 +63,9 @@ export module ConfigUtils {
                 comprehension: sourceInfo.comprehension,
                 vocabulary: sourceInfo.vocabulary,
                 knowledge: sourceInfo.knowledge,
-                pattern: sourceInfo.pattern,
+                pattern: sourceInfo.pattern
             }
-        }
+        };
     }
 
     /**
@@ -71,40 +73,42 @@ export module ConfigUtils {
      */
 
     export interface FillTheBlankSource {
-        optionWordSix: string,
-        picture: number,
-        optionWordTwo: string,
-        optionWordEight: string,
-        description: string,
-        vocabulary: number,
-        optionWordSeven: string,
-        pattern: number,
-        optionWordFive: string,
-        stem: string,
-        brainCircuit: number,
-        optionWordThree: string,
-        comprehension: number,
-        knowledge: number,
-        optionWordOne: string,
-        id: number,
-        wordAmount: number,
-        optionWordFour: string,
-        optionWordNine: string,
-        optionWordTen: string,
+        optionWordSix: string;
+        picture: number;
+        optionWordTwo: string;
+        optionWordEight: string;
+        description: string;
+        vocabulary: number;
+        optionWordSeven: string;
+        pattern: number;
+        optionWordFive: string;
+        stem: string;
+        brainCircuit: number;
+        optionWordThree: string;
+        comprehension: number;
+        knowledge: number;
+        optionWordOne: string;
+        id: number;
+        wordAmount: number;
+        optionWordFour: string;
+        optionWordNine: string;
+        optionWordTen: string;
     }
 
     export interface FillBlankQuestion {
-        id: number,
-        imageId: number,
-        description: string,
-        stem: string,
-        wordAmount: number,
+        id: number;
+        spriteId: number;
+        description: string;
+        stem: string;
+        wordAmount: number;
         attributes: Attributes;
         words: Array<string>;
         anwsers: Array<string>;
     }
 
-    export function convertFillTheBlank(source: FillTheBlankSource): FillBlankQuestion {
+    export function convertFillTheBlank(
+        source: FillTheBlankSource
+    ): FillBlankQuestion {
         let words = [
             source.optionWordOne,
             source.optionWordTwo,
@@ -122,7 +126,7 @@ export module ConfigUtils {
 
         return {
             id: source.id,
-            imageId: source.picture,
+            spriteId: source.picture,
             description: source.description,
             words: selections,
             wordAmount: source.wordAmount,
@@ -133,8 +137,81 @@ export module ConfigUtils {
                 comprehension: source.comprehension,
                 vocabulary: source.vocabulary,
                 knowledge: source.knowledge,
-                pattern: source.pattern,
+                pattern: source.pattern
             }
+        };
+    }
+
+    /**
+     * 选择图
+     */
+
+    export interface ConnectionQuestionSource {
+        optionWordTwo: number;
+        vocabulary: number;
+        optionTwo: string;
+        optionWordOne: number;
+        stem: string;
+        brainCircuit: number;
+        optionWordThree: number;
+        comprehension: number;
+        optionThree: string;
+        pattern: number;
+        optionOne: string;
+        type: number;
+        id: number;
+        knowledge: number;
+    }
+
+    export type ConnectionQuestionType = "Chinese_to_English" | "Sprite_to_English"
+
+    export interface ConnectionQuestion {
+        id: number;
+        type : ConnectionQuestionType;
+        stem: string;
+        leftItems: Array<string>;
+        rightItems: Array<string | number>;
+        attributes: Attributes;
+        anwsers: {[key: string]: string | number};
+    }
+
+    export function convertConnectionQuestion(source: ConnectionQuestionSource): ConnectionQuestion {
+        let leftItems = shuffle([
+            source.optionOne,
+            source.optionTwo,
+            source.optionThree,
+        ]);
+        let rightItems = shuffle([
+            source.optionWordOne,
+            source.optionWordTwo,
+            source.optionWordThree,
+        ]);
+        let toType = (n: number): ConnectionQuestionType  => {
+            switch(n) {
+                case 1: return "Chinese_to_English";
+                case 2: return "Sprite_to_English";
+            }
+            return "Chinese_to_English";
         }
+        let answers: {[key: string]: string | number} = {};
+        answers[source.optionOne] = source.optionWordOne;
+        answers[source.optionTwo] = source.optionWordTwo;
+        answers[source.optionThree] = source.optionWordThree;
+
+        return {
+            id: source.id,
+            anwsers: answers,
+            type: toType(source.type), 
+            stem: source.stem,
+            leftItems: leftItems,
+            rightItems: rightItems,
+            attributes: {
+                brainCircuit: source.brainCircuit,
+                comprehension: source.comprehension,
+                vocabulary: source.vocabulary,
+                knowledge: source.knowledge,
+                pattern: source.pattern
+            }
+        };
     }
 }

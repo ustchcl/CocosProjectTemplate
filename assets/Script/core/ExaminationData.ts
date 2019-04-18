@@ -4,12 +4,14 @@ import { config } from "./config/Config";
 import * as R from "ramda"
 import { QuestionLib } from "./QuestionLib";
 import { fillTheBlankConfig } from "./config/FillTheBlankConfig";
+import { collectionQuestionConfig } from "./config/ConnectionQuestionConfig";
 
 export class Examination {
     private static _instance: Examination = null;
 
     singleChoiceQuestions: QuestionLib<ConfigUtils.SingleChoiceQuestion> = null;
     fillTheBlankQuestions: QuestionLib<ConfigUtils.FillBlankQuestion> = null;
+    connnectionQuestions: QuestionLib<ConfigUtils.ConnectionQuestion> = null;
 
     private constructor() {
         this.singleChoiceQuestions = new QuestionLib<ConfigUtils.SingleChoiceQuestion>([]);
@@ -28,6 +30,7 @@ export class Examination {
     public init () {
         this.singleChoiceQuestions = new QuestionLib(sample(10, R.values(config)).map(ConfigUtils.convertSingleChoiceQuestion));
         this.fillTheBlankQuestions = new QuestionLib(sample(10, R.values(fillTheBlankConfig)).map(ConfigUtils.convertFillTheBlank));
+        this.connnectionQuestions = new QuestionLib(sample(10, R.values(collectionQuestionConfig)).map(ConfigUtils.convertConnectionQuestion))
     }
 
     /**

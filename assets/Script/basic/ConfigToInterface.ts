@@ -1,22 +1,18 @@
 const input = {
-    optionWordSix: "泉",
-    picture: 40063,
-    optionWordTwo: "陌",
-    optionWordEight: "落",
-    description: "purple road",
-    vocabulary: 20,
-    optionWordSeven: "碧",
-    pattern: 0,
-    optionWordFive: "黄",
-    stem: "输入以下词组的中文",
-    brainCircuit: 4,
-    optionWordThree: "红",
+    optionWordTwo: 69.0,
+    vocabulary: 6,
+    optionTwo: "have seed",
+    optionWordOne: 16.0,
+    stem: "将下列英文和含义相同的图片一一对应。",
+    brainCircuit: 1,
+    optionWordThree: 70.0,
     comprehension: 2,
-    knowledge: 4,
-    optionWordOne: "紫",
-    id: 40048,
-    wordAmount: 2,
-    optionWordFour: "尘",
+    optionThree: "back fruit",
+    pattern: 0,
+    optionOne: "egg yellow",
+    type: 2,
+    id: 5010,
+    knowledge: 1
 }
 
 
@@ -47,3 +43,16 @@ function json2Types(input: any): string {
 }
 
 console.log(json2Types(input))
+
+// const Max = 866278171;
+
+// import * as R from "ramda"
+
+// let howMany = 0;
+// let count = 1;
+// while (count <= Max) {
+//     let str = String(count);
+//     howMany += str.length - R.replace('3', '', str).length;
+//     count += 2;
+// }
+// console.log(howMany);

@@ -5,7 +5,6 @@ cc._RF.push(module, '3b8d6shsbNMF5SSmxR63rqU', 'Example1');
 Object.defineProperty(exports, "__esModule", { value: true });
 var Types_1 = require("../basic/Types");
 var rxjs_1 = require("rxjs");
-var Constants_1 = require("../basic/Constants");
 var ramda_1 = require("ramda");
 var BaseFunction_1 = require("../basic/BaseFunction");
 var BaseComponent_1 = require("../basic/BaseComponent");
@@ -24,14 +23,17 @@ var Example1 = /** @class */ (function (_super) {
     Example1.prototype.start = function () {
         var _this = this;
         this.actions = new rxjs_1.Subject();
-        this.minusButton.node.on(Constants_1.TOUCH_END, function () { return _this.actions.next({ typeName: "Dec", value: Types_1.unit }); });
-        this.plusButton.node.on(Constants_1.TOUCH_END, function () { return _this.actions.next({ typeName: "Inc", value: Types_1.unit }); });
-        this.maxButton.node.on(Constants_1.TOUCH_END, function () { return _this.actions.next({ typeName: "Set", value: _this.MAX_SIZE }); });
+        // this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
+        // this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
+        // this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
+        this.onTouchEnd(this.minusButton.node, Types_1.ActionUnit("Dec"));
+        this.onTouchEnd(this.plusButton.node, Types_1.ActionUnit("Inc"));
+        this.onTouchEnd(this.maxButton.node, Types_1.Action("Set", this.MAX_SIZE));
         this.state = {
             count: new rxjs_1.BehaviorSubject(200)
         };
-        this.actions.subscribe(this.eval.bind(this));
-        this.state.count.subscribe(this.render.bind(this));
+        this.actions.subscribe({ next: function (action) { return _this.eval(action); } });
+        this.state.count.subscribe({ next: function (count) { return _this.render(count); } });
     };
     Example1.prototype.render = function (count) {
         this.contentLabel.string = String(count);
