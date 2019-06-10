@@ -1,29 +1,18 @@
 import { Component } from "./Component";
-import { Fn, Type } from "./Types";
-import { Subject } from "rxjs";
+import { Fn, Type, Effect } from "./Types";
 import { TOUCH_END } from "./Constants";
 import { GlobalEnv } from "./GlobalEnv";
 import { GlobalAction } from "../core/GlobalAction";
+import { Maybe } from "./Maybe";
 
-const {ccclass, property} = cc._decorator
 
-@ccclass
 export class BaseComponent<State, Action extends Type<any, any>> extends cc.Component implements Component<State, Action> {
     state: State;
-    actions: Subject<Action>;
-
-    render(count: number) {}
 
     eval (action: Action) {}
 
     query<T>(extractor: Fn<State, T>) {
         return extractor(this.state);
-    }
-
-    close () {
-        if (this.node.parent) {
-            this.node.parent.removeChild(this.node);
-        }
     }
 
     onTouchEnd(node: cc.Node, action: Action) {
@@ -34,11 +23,38 @@ export class BaseComponent<State, Action extends Type<any, any>> extends cc.Comp
      * 将一个action 作为下一个要处理的Action
      */
     fork (action: Action) {
-        if (!this.actions) {
-            this.eval(action);
-        } else {
-            this.actions.next(action);
-        }
+        this.eval(action);
+    }
+
+    onTouchEndEffect(node: cc.Node, func: Effect<Action>) {
+        node.on(TOUCH_END, () => {
+            let action = func();
+            if (action) {
+                this.fork(action)
+            }
+        });
+    }
+
+    onTouchEndEffectMaybe(node: cc.Node, func: Effect<Maybe<Action>>) {
+        node.on(TOUCH_END, () => {
+            let action = func();
+            if (action.valid) {
+                this.fork(action.val)
+            }
+        });
+    }
+
+    onTouchEndGlobal(node: cc.Node, action: GlobalAction) {
+        node.on(TOUCH_END, () => GlobalEnv.getInstance().dispatchAction(action));
+    }
+
+    onTouchEndGlobalEffect(node: cc.Node, func: Effect<Action>) {
+        node.on(TOUCH_END, () => {
+            let action = func();
+            if (action) {
+                GlobalEnv.getInstance().dispatchAction(action)
+            }
+        });
     }
 
     /**

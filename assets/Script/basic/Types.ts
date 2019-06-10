@@ -6,6 +6,7 @@ export const unit = "Symbol_Unit"
 export type Type<T, U> = {typeName: T, value: U};
 export type TypeUnit<T> = Type<T, Unit>
 
+export type Effect<T> = () => T;
 
 
 export function Action<T, U>(typeName: T, value?: Exclude<U, Unit>): Type<T, Exclude<U, Unit>> {

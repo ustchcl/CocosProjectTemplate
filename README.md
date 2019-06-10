@@ -2,6 +2,149 @@
 
 仿照Elm, Halogen那样抽象事件，数据和渲染。
 
+
+### 新更新
+1. 二次确认框
+```typescript
+// 此处定义，需要二次确认框的类型及其可能的初始化参数
+export type SecondConfirmType 
+    = TypeUnit<"ExitSecondConfirm">
+    | Type<"SaveConfig", Pair<number, number>>
+
+export async function showSC(type: SecondConfirmType): Promise<boolean> {
+    let sc: SecondConfirm = null;
+    switch (type.typeName) {
+        case "ExitSecondConfirm": {
+            let prefab = await ResUtils.prefab("exitSecondConfirm");
+            let node = cc.instantiate(prefab);
+            sc = node.getComponent(ExitSecondConfirm);
+            GlobalEnv.getInstance().dispatchAction(Action("OpenPanelWithNode", node));
+            break;
+        }
+
+        case "SaveConfig": {
+            let prefab = await ResUtils.prefab("saveConfig");
+            let node = cc.instantiate(prefab);
+            let saveConfig = node.getComponent(SaveConfig);
+            saveConfig.init(type.value.fst, type.value.snd);
+            sc = saveConfig;
+            GlobalEnv.getInstance().dispatchAction(Action("OpenPanelWithNode", node));
+            break;
+        }
+    }
+
+    return new Promise<boolean>(function(resolve) {
+        sc.cancelBtn.node.on(TOUCH_END, () => {
+            safeRemove(sc.node);
+            resolve(false);
+        });
+        sc.yesBtn.node.on(TOUCH_END, () => {
+            safeRemove(sc.node);
+            resolve(true);
+        });
+    });
+}
+
+// usage
+async function sthOnClick () {
+    if (await showSC(Action("SaveConfig", mkPair(param1, param2)))) {
+        // 用户点击确认
+    } else {
+        // 用户点击取消
+    }
+}
+```
+
+2. BaseFunction.ts  
+更新一系列函数
+
+3. 去掉了无用的action
+
+4. Json载入测试
+```json
+// test.json
+{
+    "first": {
+        "id": 1,
+        "content": "one"
+    }
+}
+```
+
+```typescript
+import * as test from "./test.json" // 或者 import test from "./test.json"
+
+console.log(test.first.id === 1); // OK
+console.log(test.first.content === 1); // Error
+`****
+
+**测试结果**
+CocosCreator编译会报错  
+但是编译到微信小游戏里面可以正常载入Json
+
+
+> 在 tsconfig.json `compilerOptions`里面添加  
+> "resolveJsonModule": true
+
+
+## 关于消息
+传统Message传递  
+```typescript
+// pureMVC
+class XXX extends puremvc.Mediator implements puremvc.IMediator {
+    public static NAME: string = "XXXMediator";
+
+    public constructor(viewComponent: any) {
+        super(GameMenuMediator.NAME, viewComponent);
+    }
+
+
+    public listNotificationInterests(): Array<any> {
+        return [GameProxy.SCORE_UPDATE, GameProxy.SCORE_RESET];
+    }
+    
+    public handleNotification(notification: puremvc.INotification): void {
+        var data: any = notification.getBody(); // 这个地方是any
+        switch (notification.getName()) {
+            case GameProxy.SCORE_UPDATE: {
+               break;
+            }
+            case GameProxy.SCORE_RESET: {
+               break;
+            }
+        }
+    }
+}
+```
+
+消息传递只是定义了消息的名字，对消息的内容的类型并没有限定，需要靠约定。  
+自己定义`消息的类型和消息体的类型`  
+```typescript
+
+export type GlobalAction
+    = Type<"OpenPanelWithNode", cc.Node>  // 定义消息体类型： cc.Node
+    | TypeUnit<"BackToMainPage">  // 消息内容为unit
+
+
+function handleAction(action: GlobalAction) {
+    switch (action.typeName) {
+        case "OpenPanelWithNode": { // 消息类型可以提示，写错会提示
+            let node = action.value; // node的类型会被自动推断为cc.Node, 调用不是cc.Node的方法会报错
+            break;
+        }
+        case "BackToMainPage": {
+            // action.value 为 unit
+            break;
+        }
+    }
+}
+```
+
+
+
+
+
+
 - `eval` 处理事件, 根据事件更新`state`
   - 所有的逻辑，case处理，应仅有次数可以更新state
 - `render` 根据`state`渲染，可以由多个绑定到State里面各个Behavior上
@@ -75,17 +218,12 @@ export class Example1 extends BaseComponent<State, Action> {
     readonly MAX_SIZE = 999;
 
     start () {
-        this.actions = new Subject<Action>();
-        // this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
-        // this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
-        // this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
         this.onTouchEnd(this.minusButton.node, ActionUnit("Dec"));
         this.onTouchEnd(this.plusButton.node, ActionUnit("Inc"));
         this.onTouchEnd(this.maxButton.node, Action("Set", this.MAX_SIZE));
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.actions.subscribe({ next: action => this.eval(action) });
         this.state.count.subscribe({ next: count => this.render(count)});
     }
 

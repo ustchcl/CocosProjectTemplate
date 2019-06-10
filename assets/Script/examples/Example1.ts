@@ -29,17 +29,12 @@ export class Example1 extends BaseComponent<State, Action> {
     readonly MAX_SIZE = 999;
 
     start () {
-        this.actions = new Subject<Action>();
-        // this.minusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Dec", value: unit}));
-        // this.plusButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Inc", value: unit}));
-        // this.maxButton.node.on(TOUCH_END, () => this.actions.next({typeName: "Set", value: this.MAX_SIZE}));
         this.onTouchEnd(this.minusButton.node, ActionUnit("Dec"));
         this.onTouchEnd(this.plusButton.node, ActionUnit("Inc"));
         this.onTouchEnd(this.maxButton.node, Action("Set", this.MAX_SIZE));
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.actions.subscribe({ next: action => this.eval(action) });
         this.state.count.subscribe({ next: count => this.render(count)});
     }
 
