@@ -76,7 +76,7 @@ import * as test from "./test.json" // 或者 import test from "./test.json"
 
 console.log(test.first.id === 1); // OK
 console.log(test.first.content === 1); // Error
-`****
+```
 
 **测试结果**
 CocosCreator编译会报错  
