@@ -2,6 +2,7 @@
 cc._RF.push(module, 'c3e82Yk29BLdq4XWT6YbyBK', 'Stack');
 // Script/basic/Stack.ts
 
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Maybe_1 = require("./Maybe");
 var ramda_1 = require("ramda");

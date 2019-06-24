@@ -1,6 +1,5 @@
 let process = require('child_process')
 let clc = require('cli-color');
-
 function system(command) {
     return new Promise(function(resolve, reject) {
         process.exec(command, function(err, stdout, stderr) {
@@ -48,8 +47,8 @@ async function pack() {
         cp ./html/bind/icon.png ./build/web-mobile/icon.png');
 
     console.log(clc.green('copy successfully.'))
-    console.log(clc.red('start zipping...'))
-    // zip
+    console.log(clc.green('copy successfully.'))
+                                                    // zip
     await system('7z a ./build/web-mobile/web-mobile.zip ./build/web-mobile/*');
 }
 

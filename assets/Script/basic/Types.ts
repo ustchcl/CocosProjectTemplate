@@ -17,6 +17,9 @@ export function ActionUnit<T>(typeName: T): Type<T, Unit> {
     return {typeName: typeName, value: unit};
 }
 
+export const Cons = Action;
+export const ConsUnit = ActionUnit;
+
 
 // 函数类型
 export type Fn<F1, F2> =  (_: F1) => F2
@@ -29,4 +32,3 @@ export type Pair<F1, F2> = { fst: F1, snd: F2 };
 export function mkPair<F1, F2>(fst: F1, snd: F2): Pair<F1, F2> {
     return { fst: fst, snd: snd }
 }
-

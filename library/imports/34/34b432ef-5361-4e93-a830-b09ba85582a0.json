@@ -2,7 +2,7 @@
   "__type__": "cc.SpriteAtlas",
   "_name": "base_panel.plist",
   "_objFlags": 0,
-  "_rawFiles": null,
+  "_native": "",
   "_spriteFrames": {
     "beibaodi2": {
       "__uuid__": "cd4d0305-15d9-4944-8295-d8e7ae12c746"

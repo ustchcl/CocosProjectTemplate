@@ -1,9 +1,5 @@
 import { Type, TypeUnit } from "../basic/Types";
 
-export type GlobalAction
-    = TypeUnit<"StartGame">
-    | Type<"OpenPanel", PrefabName>
-
-export type PrefabName
-    = "Prefab1"
-    | "Prefab2"
+export type GlobalAction 
+    = TypeUnit<"GloablAction1">
+    | Type<"LevelUp", number>

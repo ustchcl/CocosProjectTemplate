@@ -2,6 +2,7 @@
 cc._RF.push(module, '310ce4fT5pPh5Fi60i3qm7P', 'Array', __filename);
 // Script/basic/Array.ts
 
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Maybe_1 = require("./Maybe");
 var R = require("ramda");
@@ -90,13 +91,13 @@ exports.swap = swap;
  * 将数组的元素随机重新排列
  */
 function shuffle(array) {
+    var _a;
     var length = array.length;
     for (var i = length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         _a = [array[j], array[i]], array[i] = _a[0], array[j] = _a[1];
     }
     return array;
-    var _a;
 }
 exports.shuffle = shuffle;
 /**

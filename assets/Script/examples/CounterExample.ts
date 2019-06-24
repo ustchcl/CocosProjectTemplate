@@ -1,4 +1,4 @@
-import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
+import { Type, TypeUnit, ActionUnit, Action, unit } from "../basic/Types";
 import { BehaviorSubject, Subject } from "rxjs";
 import { __, add, always } from "ramda"
 import { modify } from "../basic/BaseFunction";
@@ -16,7 +16,7 @@ type Action
     | Type<"Set", number>
 
 @ccclass
-export class Example1 extends BaseComponent<State, Action> {
+export class CounterExample extends BaseComponent<State, Action> {
     @property(cc.Button)
     minusButton: cc.Button = null;
     @property(cc.Button)

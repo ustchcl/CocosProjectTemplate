@@ -2,39 +2,60 @@
 cc._RF.push(module, 'd3bdf79ecRFUYUnBSSL9G8I', 'BaseComponent');
 // Script/basic/BaseComponent.ts
 
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Constants_1 = require("./Constants");
 var GlobalEnv_1 = require("./GlobalEnv");
-var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var BaseComponent = /** @class */ (function (_super) {
     __extends(BaseComponent, _super);
     function BaseComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    BaseComponent.prototype.render = function (count) { };
-    BaseComponent.prototype.eval = function (action) { };
     BaseComponent.prototype.query = function (extractor) {
         return extractor(this.state);
     };
-    BaseComponent.prototype.close = function () {
-        if (this.node.parent) {
-            this.node.parent.removeChild(this.node);
-        }
-    };
     BaseComponent.prototype.onTouchEnd = function (node, action) {
         var _this = this;
-        node.on(Constants_1.TOUCH_END, function () { return _this.fork(action); });
+        node.on(Constants_1.TOUCH_END, function () { return _this.eval(action); });
     };
-    /**
-     * 将一个action 作为下一个要处理的Action
-     */
-    BaseComponent.prototype.fork = function (action) {
-        if (!this.actions) {
-            this.eval(action);
-        }
-        else {
-            this.actions.next(action);
-        }
+    BaseComponent.prototype.onTouchEndEffect = function (node, func) {
+        var _this = this;
+        node.on(Constants_1.TOUCH_END, function () {
+            var action = func();
+            if (action) {
+                _this.eval(action);
+            }
+        });
+    };
+    BaseComponent.prototype.onTouchEndEffectMaybe = function (node, func) {
+        var _this = this;
+        node.on(Constants_1.TOUCH_END, function () {
+            var action = func();
+            if (action.valid) {
+                _this.eval(action.val);
+            }
+        });
+    };
+    BaseComponent.prototype.onTouchEndGlobal = function (node, action) {
+        node.on(Constants_1.TOUCH_END, function () { return GlobalEnv_1.GlobalEnv.getInstance().dispatchAction(action); });
+    };
+    BaseComponent.prototype.onTouchEndGlobalEffect = function (node, func) {
+        node.on(Constants_1.TOUCH_END, function () {
+            var action = func();
+            if (action) {
+                GlobalEnv_1.GlobalEnv.getInstance().dispatchAction(action);
+            }
+        });
     };
     /**
      * 向全局发射事件，关心此事件的地方
@@ -43,9 +64,6 @@ var BaseComponent = /** @class */ (function (_super) {
     BaseComponent.prototype.dispatch = function (action) {
         GlobalEnv_1.GlobalEnv.getInstance().dispatchAction(action);
     };
-    BaseComponent = __decorate([
-        ccclass
-    ], BaseComponent);
     return BaseComponent;
 }(cc.Component));
 exports.BaseComponent = BaseComponent;

@@ -1,10 +1,23 @@
-export class Singleton {
-    private static _instance: Singleton = null;
+// 不再使用Singleton模式，使用全局const变量替代之
 
-    public static getInstance() {
-        if (this._instance == null) {
-            this._instance = new Singleton();
-        }
-        return this._instance;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

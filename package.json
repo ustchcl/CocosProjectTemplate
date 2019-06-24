@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "@types/ramda": "types/npm-ramda#dist"
+    "@types/ramda": "types/npm-ramda#dist",
+    "rxjs": "latest",
+    "ramda": "latest"
   }
 }
