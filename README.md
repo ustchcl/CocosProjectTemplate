@@ -3,6 +3,36 @@
 仿照Elm, Halogen那样抽象事件，数据和渲染。
 
 
+### 更新 07.08
+**1. 添加subs**   
+BaseComponent在destroy时，会将subs全部unsubscribe  
+
+```typescript
+// BaseComponent.ts
+export abstract class BaseComponent<State, Action extends Type<any, any>> extends cc.Component implements Component<State, Action> {
+    subs: Array<Subscription> = [];
+
+    onDestroy() {
+        this.subs.forEach(sub => sub.unsubscribe());
+    }
+}
+
+// Example.ts
+@ccclass 
+export class CounterExample extends BaseComponent<State, Action> {
+    start () {
+        this.subs = [
+            this.state.count.subscribe({ next: count => this.render(count)})
+        ]
+    }
+}
+```
+
+**2. safeRemove修改**  
+现在safeRemove默认调用`node.destroy()`
+
+
+
 ### 新更新
 1. 二次确认框
 ```typescript
@@ -188,7 +218,7 @@ view model =            -- render
 
 ```typescript
 import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject } from "rxjs";
 import { __, add, always } from "ramda"
 import { modify } from "../basic/BaseFunction";
 import { BaseComponent } from "../basic/BaseComponent";
@@ -205,7 +235,7 @@ type Action
     | Type<"Set", number>
 
 @ccclass
-export class Example1 extends BaseComponent<State, Action> {
+export class CounterExample extends BaseComponent<State, Action> {
     @property(cc.Button)
     minusButton: cc.Button = null;
     @property(cc.Button)
@@ -224,7 +254,9 @@ export class Example1 extends BaseComponent<State, Action> {
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.state.count.subscribe({ next: count => this.render(count)});
+        this.subs = [
+            this.state.count.subscribe({ next: count => this.render(count)})
+        ]
     }
 
     render(count: number) {

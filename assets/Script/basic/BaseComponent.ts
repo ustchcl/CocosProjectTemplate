@@ -4,10 +4,12 @@ import { TOUCH_END } from "./Constants";
 import { GlobalEnv } from "./GlobalEnv";
 import { GlobalAction } from "../core/GlobalAction";
 import { Maybe } from "./Maybe";
+import { Subscription } from "rxjs";
 
 
 export abstract class BaseComponent<State, Action extends Type<any, any>> extends cc.Component implements Component<State, Action> {
     state: State;
+    subs: Array<Subscription> = [];
 
     abstract eval (action: Action): void;
 
@@ -56,5 +58,9 @@ export abstract class BaseComponent<State, Action extends Type<any, any>> extend
      */
     dispatch(action: GlobalAction) {
         GlobalEnv.getInstance().dispatchAction(action);
+    }
+
+    onDestroy() {
+        this.subs.forEach(sub => sub.unsubscribe());
     }
 }

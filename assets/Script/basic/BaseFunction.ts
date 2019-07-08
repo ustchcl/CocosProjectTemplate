@@ -150,6 +150,7 @@ export function formatNum(num: number, length: number): string {
 export function safeRemove(node: cc.Node):void {
     if (node && node.parent) {
         node.parent.removeChild(node);
+        node.destroy();
     }
 }
 

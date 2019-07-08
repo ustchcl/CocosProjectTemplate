@@ -40,7 +40,9 @@ export class AsyncExample extends BaseComponent<State, Action> {
         this.state = {
             content: new BehaviorSubject(ConsUnit("NotAsked"))
         };
-        this.state.content.subscribe({ next: content => this.render(content)});
+        this.subs = [
+            this.state.content.subscribe({ next: content => this.render(content)})
+        ]
     }
 
     render(content: RemoteData<string, string>) {

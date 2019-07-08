@@ -1,313 +1,68 @@
-2019-06-24T09:32:05.504Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-24T09:32:05.545Z - normal: Initializing Asset Database
-2019-06-24T09:32:05.547Z - normal: checking language setting...
-2019-06-24T09:32:05.548Z - normal: Language: zh
-2019-06-24T09:32:06.067Z - success: preview server running at http://localhost:7456
-2019-06-24T09:32:06.106Z - success: protocol editor-framework registered
-2019-06-24T09:32:06.106Z - success: protocol app registered
-2019-06-24T09:32:06.106Z - success: protocol theme registered
-2019-06-24T09:32:06.106Z - success: protocol packages registered
-2019-06-24T09:32:06.106Z - success: protocol uuid registerred
-2019-06-24T09:32:06.106Z - success: protocol db registerred
-2019-06-24T09:32:06.106Z - success: protocol thumbnail registerred
-2019-06-24T09:32:06.107Z - success: protocol unpack registerred
-2019-06-24T09:32:06.107Z - success: protocol disable-commonjs registerred
-2019-06-24T09:32:06.320Z - normal: connected!
-2019-06-24T09:32:06.321Z - normal: Check project /Users/huangchenglin/code/cocos/CocosProjectTemplate
-2019-06-24T09:32:06.322Z - normal: Initializing project /Users/huangchenglin/code/cocos/CocosProjectTemplate
-2019-06-24T09:32:06.607Z - normal: Initializing Cocos2d
-2019-06-24T09:32:07.199Z - normal: Initializing engine extends
-2019-06-24T09:32:07.270Z - success: asset-db-debugger loaded
-2019-06-24T09:32:07.272Z - success: baidu-adapter loaded
-2019-06-24T09:32:07.273Z - success: color-picker loaded
-2019-06-24T09:32:07.341Z - success: fb-audience-network loaded
-2019-06-24T09:32:07.382Z - success: fb-live-stream loaded
-2019-06-24T09:32:07.387Z - success: google-play-instant loaded
-2019-06-24T09:32:07.391Z - success: huawei-runtime loaded
-2019-06-24T09:32:07.579Z - success: cpk-publish loaded
-2019-06-24T09:32:07.580Z - success: jsb-adapter loaded
-2019-06-24T09:32:07.584Z - success: oppo-runtime loaded
-2019-06-24T09:32:07.600Z - success: package-manager loaded
-2019-06-24T09:32:07.687Z - success: qqplay-adapter loaded
-2019-06-24T09:32:07.689Z - success: runtime-dev-tools loaded
-2019-06-24T09:32:07.701Z - success: sdkbox loaded
-2019-06-24T09:32:07.714Z - success: tester loaded
-2019-06-24T09:32:07.728Z - success: ui-grid loaded
-2019-06-24T09:32:07.741Z - success: ui-kit-preview-extra loaded
-2019-06-24T09:32:07.753Z - success: ui-kit-preview loaded
-2019-06-24T09:32:07.763Z - success: ui-kit loaded
-2019-06-24T09:32:07.775Z - success: ui-tree loaded
-2019-06-24T09:32:07.779Z - success: vivo-runtime loaded
-2019-06-24T09:32:07.780Z - success: weapp-adapter loaded
-2019-06-24T09:32:07.781Z - success: xiaomi-adapter loaded
-2019-06-24T09:32:07.824Z - success: assets loaded
-2019-06-24T09:32:07.835Z - success: builder loaded
-2019-06-24T09:32:08.069Z - success: cocos-services loaded
-2019-06-24T09:32:08.082Z - success: console loaded
-2019-06-24T09:32:08.107Z - success: fb-instant-games loaded
-2019-06-24T09:32:08.108Z - success: google-instant-games loaded
-2019-06-24T09:32:08.119Z - success: hierarchy loaded
-2019-06-24T09:32:08.132Z - success: inspector loaded
-2019-06-24T09:32:08.133Z - success: keystore loaded
-2019-06-24T09:32:08.147Z - success: node-library loaded
-2019-06-24T09:32:08.148Z - success: package-asset loaded
-2019-06-24T09:32:08.149Z - success: preferences loaded
-2019-06-24T09:32:08.160Z - success: project-exporter loaded
-2019-06-24T09:32:08.173Z - success: project-importer loaded
-2019-06-24T09:32:08.192Z - success: project-settings loaded
-2019-06-24T09:32:08.206Z - success: scene loaded
-2019-06-24T09:32:08.209Z - success: simulator-debugger loaded
-2019-06-24T09:32:08.210Z - success: sprite-editor loaded
-2019-06-24T09:32:08.224Z - success: store loaded
-2019-06-24T09:32:08.237Z - success: timeline loaded
-2019-06-24T09:32:08.241Z - success: xiaomi-runtime loaded
-2019-06-24T09:32:09.013Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/config.meta
-2019-06-24T09:32:09.015Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/ConnectionQuestion.ts.meta
-2019-06-24T09:32:09.015Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/ExaminationData.ts.meta
-2019-06-24T09:32:09.016Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/ExaminationPanel.ts.meta
-2019-06-24T09:32:09.018Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/FillTheBlank.ts.meta
-2019-06-24T09:32:09.019Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/QuestionLib.ts.meta
-2019-06-24T09:32:09.020Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/res.meta
-2019-06-24T09:32:09.021Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/core/SingleChoiceQuestionPanel.ts.meta
-2019-06-24T09:32:09.022Z - warn: [db-task][init] Backup unused meta file: db://assets/Script/examples/Example1.ts.meta
-2019-06-24T09:32:09.605Z - info: Cocos Services load base data!
-2019-06-24T09:32:11.585Z - normal: Loading packages
-2019-06-24T09:32:11.593Z - normal: Watching packages
-2019-06-24T09:32:11.691Z - normal: Run Application
-2019-06-24T09:32:15.338Z - failed: load script [ramda] failed : Error: Cannot find module 'ramda'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Array.js:1:353
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Array.js:8:9)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Array.js:115:13
-2019-06-24T09:32:15.387Z - failed: load script [ramda] failed : Error: Cannot find module 'ramda'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/BaseFunction.js:1:360
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/BaseFunction.js:8:9)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/BaseFunction.js:212:13
-2019-06-24T09:32:15.397Z - failed: load script [ramda] failed : Error: Cannot find module 'ramda'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Stack.js:1:353
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Stack.js:8:15)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/basic/Stack.js:45:13
-2019-06-24T09:32:15.400Z - failed: load script [../res/ResUtils] failed : Error: Cannot find module '../res/ResUtils'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:1:379
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:42:18)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:95:13
-2019-06-24T09:32:15.402Z - failed: load script [ramda] failed : Error: Cannot find module 'ramda'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/AyncExample.js:1:362
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/AyncExample.js:60:15)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/AyncExample.js:148:13
-2019-06-24T09:32:15.404Z - failed: load script [ramda] failed : Error: Cannot find module 'ramda'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/CounterExample.js:1:365
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/CounterExample.js:25:15)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/examples/CounterExample.js:97:13
-2019-06-24T09:32:15.496Z - warn: Script attached to "singleChoiceQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/singleChoiceQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:15.501Z - warn: Script attached to "connectionQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/connectionQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:15.516Z - warn: Script attached to "fillTheBlank" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/fillTheBlank"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:15.517Z - warn: Script attached to "New Node" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "58cb4192-79bd-44ae-a4be-212efb475089"
-Class ID: "58cb4GSeb1ErqS+IS77R1CJ"
-
-2019-06-24T09:32:15.563Z - warn: Script attached to "singleChoiceQuestion" in prefab "singleChoiceQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "singleChoiceQuestion"
-Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:15.572Z - warn: Script attached to "connectionQuestion" in prefab "connectionQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "connectionQuestion"
-Asset url: "db://assets/prefab/connectionQuestion.prefab"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:15.584Z - warn: Script attached to "fillTheBlank" in prefab "fillTheBlank.prefab" is missing or invalid. Detailed information:
-Node path: "fillTheBlank"
-Asset url: "db://assets/prefab/fillTheBlank.prefab"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:26.725Z - warn: Script attached to "Canvas" in scene "example.fire" is missing or invalid. Detailed information:
-Node path: "Canvas"
-Asset url: "db://assets/Scene/example.fire"
-Script UUID: "3b8d6b21-b1b3-4c17-9492-9b147adeba94"
-Class ID: "3b8d6shsbNMF5SSmxR63rqU"
-
-2019-06-24T09:32:28.508Z - warn: Script attached to "singleChoiceQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/singleChoiceQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:28.511Z - warn: Script attached to "connectionQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/connectionQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:28.515Z - warn: Script attached to "fillTheBlank" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/fillTheBlank"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:28.516Z - warn: Script attached to "New Node" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "58cb4192-79bd-44ae-a4be-212efb475089"
-Class ID: "58cb4GSeb1ErqS+IS77R1CJ"
-
-2019-06-24T09:32:28.528Z - warn: Script attached to "singleChoiceQuestion" in prefab "singleChoiceQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "singleChoiceQuestion"
-Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:28.544Z - warn: Script attached to "connectionQuestion" in prefab "connectionQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "connectionQuestion"
-Asset url: "db://assets/prefab/connectionQuestion.prefab"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:28.552Z - warn: Script attached to "fillTheBlank" in prefab "fillTheBlank.prefab" is missing or invalid. Detailed information:
-Node path: "fillTheBlank"
-Asset url: "db://assets/prefab/fillTheBlank.prefab"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:30.434Z - warn: Script attached to "singleChoiceQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/singleChoiceQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:30.437Z - warn: Script attached to "connectionQuestion" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/connectionQuestion"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:30.441Z - warn: Script attached to "fillTheBlank" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node/fillTheBlank"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:30.442Z - warn: Script attached to "New Node" in scene "main.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/New Node"
-Asset url: "db://assets/Scene/main.fire"
-Script UUID: "58cb4192-79bd-44ae-a4be-212efb475089"
-Class ID: "58cb4GSeb1ErqS+IS77R1CJ"
-
-2019-06-24T09:32:30.453Z - warn: Script attached to "singleChoiceQuestion" in prefab "singleChoiceQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "singleChoiceQuestion"
-Asset url: "db://assets/prefab/singleChoiceQuestion.prefab"
-Script UUID: "18bc356a-4615-407a-beff-08a1b1d3d761"
-Class ID: "18bc3VqRhVAer7/CKGx09dh"
-
-2019-06-24T09:32:30.461Z - warn: Script attached to "connectionQuestion" in prefab "connectionQuestion.prefab" is missing or invalid. Detailed information:
-Node path: "connectionQuestion"
-Asset url: "db://assets/prefab/connectionQuestion.prefab"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:30.468Z - warn: Script attached to "fillTheBlank" in prefab "fillTheBlank.prefab" is missing or invalid. Detailed information:
-Node path: "fillTheBlank"
-Asset url: "db://assets/prefab/fillTheBlank.prefab"
-Script UUID: "7621dd3e-2f9f-40fb-9912-7bd1c965eba5"
-Class ID: "7621d0+L59A+5kSe9HJZeul"
-
-2019-06-24T09:32:31.326Z - warn: Script attached to "connectionQuestion" in scene "studio.fire" is missing or invalid. Detailed information:
-Node path: "Canvas/connectionQuestion"
-Asset url: "db://assets/Scene/studio.fire"
-Script UUID: "2d48f8a0-5eb0-4dea-b018-7a2b8fd4fb0f"
-Class ID: "2d48figXrBN6rAYeiuP1PsP"
-
-2019-06-24T09:32:32.418Z - warn: The Asset used by component "cc.Sprite" in scene "test.fire" is missing. Detailed information:
-Node path: "Canvas/sprite_78"
-Asset url: "db://assets/Scene/test.fire"
-Missing uuid: "c86b8dcf-14b4-4d45-bf95-2493fd7f4b56"
-
-2019-06-24T09:32:39.930Z - warn: Script attached to "Canvas" in scene "example.fire" is missing or invalid. Detailed information:
-Node path: "Canvas"
-Asset url: "db://assets/Scene/example.fire"
-Script UUID: "3b8d6b21-b1b3-4c17-9492-9b147adeba94"
-Class ID: "3b8d6shsbNMF5SSmxR63rqU"
-
-2019-06-24T09:37:50.810Z - failed: load script [../res/ResUtils] failed : Error: Cannot find module '../res/ResUtils'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:1:379
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:42:18)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:95:13
-2019-06-24T09:38:36.155Z - failed: load script [../res/ResUtils] failed : Error: Cannot find module '../res/ResUtils'
-    at Module._resolveFilename (module.js:470:15)
-    at Function.Module._resolveFilename [as _resolveFilenameVendor] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
-    at Function.s._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:941)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.cc.require (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.js:1:589)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:1:379
-    at __define (/Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:42:18)
-    at /Users/huangchenglin/code/cocos/CocosProjectTemplate/temp/quick-scripts/assets/Script/core/secondConfirm/SecondConfirmUtils.js:95:13
+2019-07-08T11:04:30.491Z - normal: Load ~/.CocosCreator/settings.json
+2019-07-08T11:04:30.531Z - normal: Initializing Asset Database
+2019-07-08T11:04:30.534Z - normal: checking language setting...
+2019-07-08T11:04:30.534Z - normal: Language: zh
+2019-07-08T11:04:31.027Z - success: preview server running at http://localhost:7456
+2019-07-08T11:04:31.064Z - success: protocol editor-framework registered
+2019-07-08T11:04:31.064Z - success: protocol app registered
+2019-07-08T11:04:31.064Z - success: protocol theme registered
+2019-07-08T11:04:31.064Z - success: protocol packages registered
+2019-07-08T11:04:31.064Z - success: protocol uuid registerred
+2019-07-08T11:04:31.064Z - success: protocol db registerred
+2019-07-08T11:04:31.064Z - success: protocol thumbnail registerred
+2019-07-08T11:04:31.064Z - success: protocol unpack registerred
+2019-07-08T11:04:31.065Z - success: protocol disable-commonjs registerred
+2019-07-08T11:04:31.342Z - normal: connected!
+2019-07-08T11:04:31.343Z - normal: Check project /Users/huangchenglin/code/cocos/CocosProjectTemplate
+2019-07-08T11:04:31.345Z - normal: Initializing project /Users/huangchenglin/code/cocos/CocosProjectTemplate
+2019-07-08T11:04:31.608Z - normal: Initializing Cocos2d
+2019-07-08T11:04:32.210Z - normal: Initializing engine extends
+2019-07-08T11:04:32.238Z - success: asset-db-debugger loaded
+2019-07-08T11:04:32.239Z - success: baidu-adapter loaded
+2019-07-08T11:04:32.240Z - success: color-picker loaded
+2019-07-08T11:04:32.301Z - success: fb-audience-network loaded
+2019-07-08T11:04:32.338Z - success: fb-live-stream loaded
+2019-07-08T11:04:32.341Z - success: google-play-instant loaded
+2019-07-08T11:04:32.345Z - success: huawei-runtime loaded
+2019-07-08T11:04:32.520Z - success: cpk-publish loaded
+2019-07-08T11:04:32.521Z - success: jsb-adapter loaded
+2019-07-08T11:04:32.526Z - success: oppo-runtime loaded
+2019-07-08T11:04:32.542Z - success: package-manager loaded
+2019-07-08T11:04:32.626Z - success: qqplay-adapter loaded
+2019-07-08T11:04:32.628Z - success: runtime-dev-tools loaded
+2019-07-08T11:04:32.644Z - success: sdkbox loaded
+2019-07-08T11:04:32.656Z - success: tester loaded
+2019-07-08T11:04:32.669Z - success: ui-grid loaded
+2019-07-08T11:04:32.681Z - success: ui-kit-preview-extra loaded
+2019-07-08T11:04:32.694Z - success: ui-kit-preview loaded
+2019-07-08T11:04:32.706Z - success: ui-kit loaded
+2019-07-08T11:04:32.718Z - success: ui-tree loaded
+2019-07-08T11:04:32.722Z - success: vivo-runtime loaded
+2019-07-08T11:04:32.723Z - success: weapp-adapter loaded
+2019-07-08T11:04:32.724Z - success: xiaomi-adapter loaded
+2019-07-08T11:04:32.766Z - success: assets loaded
+2019-07-08T11:04:32.778Z - success: builder loaded
+2019-07-08T11:04:32.965Z - success: cocos-services loaded
+2019-07-08T11:04:32.979Z - success: console loaded
+2019-07-08T11:04:33.003Z - success: fb-instant-games loaded
+2019-07-08T11:04:33.010Z - success: google-instant-games loaded
+2019-07-08T11:04:33.022Z - success: hierarchy loaded
+2019-07-08T11:04:33.033Z - success: inspector loaded
+2019-07-08T11:04:33.034Z - success: keystore loaded
+2019-07-08T11:04:33.048Z - success: node-library loaded
+2019-07-08T11:04:33.050Z - success: package-asset loaded
+2019-07-08T11:04:33.051Z - success: preferences loaded
+2019-07-08T11:04:33.062Z - success: project-exporter loaded
+2019-07-08T11:04:33.076Z - success: project-importer loaded
+2019-07-08T11:04:33.087Z - success: project-settings loaded
+2019-07-08T11:04:33.100Z - success: scene loaded
+2019-07-08T11:04:33.101Z - success: simulator-debugger loaded
+2019-07-08T11:04:33.102Z - success: sprite-editor loaded
+2019-07-08T11:04:33.114Z - success: store loaded
+2019-07-08T11:04:33.128Z - success: timeline loaded
+2019-07-08T11:04:33.133Z - success: xiaomi-runtime loaded
+2019-07-08T11:04:35.218Z - normal: Loading packages
+2019-07-08T11:04:35.223Z - normal: Watching packages
+2019-07-08T11:04:35.296Z - normal: Run Application
+2019-07-08T11:04:35.402Z - info: Cocos Services load base data!
+2019-07-08T11:05:00.920Z - info: shutdown preview server

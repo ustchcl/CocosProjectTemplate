@@ -1,5 +1,5 @@
-import { Type, TypeUnit, ActionUnit, Action, unit } from "../basic/Types";
-import { BehaviorSubject, Subject } from "rxjs";
+import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
+import { BehaviorSubject } from "rxjs";
 import { __, add, always } from "ramda"
 import { modify } from "../basic/BaseFunction";
 import { BaseComponent } from "../basic/BaseComponent";
@@ -35,7 +35,9 @@ export class CounterExample extends BaseComponent<State, Action> {
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
-        this.state.count.subscribe({ next: count => this.render(count)});
+        this.subs = [
+            this.state.count.subscribe({ next: count => this.render(count)})
+        ]
     }
 
     render(count: number) {
