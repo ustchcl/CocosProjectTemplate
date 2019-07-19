@@ -1,4 +1,3 @@
-import { Type, TypeUnit, ActionUnit, Action, unit, Cons, ConsUnit } from "../basic/Types";
 import { BehaviorSubject } from "rxjs";
 import { always } from "ramda"
 import { modify, wait } from "../basic/BaseFunction";
@@ -13,9 +12,9 @@ interface State {
 }
 
 type Action 
-    = TypeUnit<"Fetch">
-    | TypeUnit<"Cancel"> 
-    | TypeUnit<"Clear">
+    = ["Fetch"]
+    | ["Cancel"]
+    | ["Clear"]
 
 @ccclass
 export class AsyncExample extends BaseComponent<State, Action> {
@@ -31,14 +30,14 @@ export class AsyncExample extends BaseComponent<State, Action> {
         // this.onTouchEnd(this.fetchBtn.node, ActionUnit("Fetch"));
         // 如果需要在响应之后触发回调
         this.fetchBtn.node.on(TOUCH_END, async () => {
-            await this.eval(ActionUnit("Fetch"));
+            await this.eval(["Fetch"]);
             console.log("callback");
             // callback
         }, this);
 
-        this.onTouchEnd(this.clearBtn.node, ActionUnit("Clear"));
+        this.onTouchEnd(this.clearBtn.node, ["Clear"]);
         this.state = {
-            content: new BehaviorSubject(ConsUnit("NotAsked"))
+            content: new BehaviorSubject(["NotAsked"])
         };
         this.subs = [
             this.state.content.subscribe({ next: content => this.render(content)})
@@ -46,7 +45,7 @@ export class AsyncExample extends BaseComponent<State, Action> {
     }
 
     render(content: RemoteData<string, string>) {
-        switch (content.typeName) {
+        switch (content[0]) {
             case "NotAsked": {
                 this.contentLabel.string = "click fetch button";
                 break;
@@ -56,32 +55,32 @@ export class AsyncExample extends BaseComponent<State, Action> {
                 break;
             }
             case "Success": {
-                this.contentLabel.string = `:simle: ${content.value}`;
+                this.contentLabel.string = `:simle: ${content[1]}`;
                 break; 
             }
             case "Failure": {
-                this.contentLabel.string = `:error: ${content.value}`;
+                this.contentLabel.string = `:error: ${content[1]}`;
                 break;
             }
         }
     }
 
     async eval (action: Action) {
-        switch (action.typeName) {
+        switch (action[0]) {
             case "Fetch": {
-                modify(this.state.content, always(ConsUnit("Loading")));
+                modify(this.state.content, always(["Loading"]));
                 await wait(3);
                 // 网络请求或者其他
                 if (Math.random() > 0.2) {
-                    modify(this.state.content, always(Cons("Success", "All packages installed (1 packages installed from git, used 4s(network 4s)")));
+                    modify(this.state.content, always(["Success", "All packages installed (1 packages installed from git, used 4s(network 4s)"]));
                 } else {
-                    modify(this.state.content, always(Cons("Failure", "errCode: 500")));
+                    modify(this.state.content, always(["Failure", "errCode: 500"]));
                 }
                 
                 break;
             }
             case "Clear": {
-                modify(this.state.content, always(ConsUnit("NotAsked")));
+                modify(this.state.content, always(["NotAsked"]));
                 break;
             }
         }

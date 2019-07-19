@@ -2,24 +2,7 @@
 export type Unit = "Symbol_Unit"
 export const unit = "Symbol_Unit"
 
-// 类型构建器
-export type Type<T, U> = {typeName: T, value: U};
-export type TypeUnit<T> = Type<T, Unit>
-
 export type Effect<T> = () => T;
-
-
-export function Action<T, U>(typeName: T, value?: Exclude<U, Unit>): Type<T, Exclude<U, Unit>> {
-    return {typeName: typeName, value: value};
-}
-
-export function ActionUnit<T>(typeName: T): Type<T, Unit> {
-    return {typeName: typeName, value: unit};
-}
-
-export const Cons = Action;
-export const ConsUnit = ActionUnit;
-
 
 // 函数类型
 export type Fn<F1, F2> =  (_: F1) => F2

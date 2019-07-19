@@ -1,8 +1,7 @@
 "use strict";
 cc._RF.push(module, '310ce4fT5pPh5Fi60i3qm7P', 'Array');
-// Script/basic/Array.ts
+// script/basic/Array.ts
 
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Maybe_1 = require("./Maybe");
 var R = require("ramda");

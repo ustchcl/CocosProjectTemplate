@@ -1,5 +1,4 @@
 import * as Rx from "rxjs"
-import { Type } from "./Types";
 import { GlobalAction } from "../core/GlobalAction";
 
 export class GlobalEnv {

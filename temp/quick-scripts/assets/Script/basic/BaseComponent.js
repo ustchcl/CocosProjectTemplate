@@ -1,25 +1,16 @@
-(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/basic/BaseComponent.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/script/basic/BaseComponent.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
 cc._RF.push(module, 'd3bdf79ecRFUYUnBSSL9G8I', 'BaseComponent', __filename);
-// Script/basic/BaseComponent.ts
+// script/basic/BaseComponent.ts
 
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Constants_1 = require("./Constants");
 var GlobalEnv_1 = require("./GlobalEnv");
 var BaseComponent = /** @class */ (function (_super) {
     __extends(BaseComponent, _super);
     function BaseComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.subs = [];
+        return _this;
     }
     BaseComponent.prototype.query = function (extractor) {
         return extractor(this.state);
@@ -63,6 +54,9 @@ var BaseComponent = /** @class */ (function (_super) {
      */
     BaseComponent.prototype.dispatch = function (action) {
         GlobalEnv_1.GlobalEnv.getInstance().dispatchAction(action);
+    };
+    BaseComponent.prototype.onDestroy = function () {
+        this.subs.forEach(function (sub) { return sub.unsubscribe(); });
     };
     return BaseComponent;
 }(cc.Component));

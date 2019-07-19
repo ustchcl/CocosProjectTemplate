@@ -1,8 +1,22 @@
 {
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
   "encryptJs": true,
   "excludeScenes": [
-    "55a928ee-1bb0-41d7-8c4f-ce8d7f052f83",
-    "2f93079d-776d-4e34-9c6f-d672136b9531"
+    "06caa989-35e8-46c8-b279-bc890d0193e3"
   ],
   "fb-instant-games": {},
   "includeSDKBox": false,
@@ -22,7 +36,7 @@
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait"
   },
-  "startScene": "4d595b55-fa9b-41a7-8856-f2a598887e44",
+  "startScene": "93028d47-6d1b-45fe-b0c3-a07746c8f49b",
   "title": "Chinglish",
   "webOrientation": "auto",
   "wechatgame": {
@@ -33,20 +47,5 @@
     "subContext": ""
   },
   "xxteaKey": "6812634d-c63a-4c",
-  "zipCompressJs": true,
-  "baidugame": {
-    "appid": "testappid",
-    "orientation": "portrait",
-    "REMOTE_SERVER_ROOT": "",
-    "subContext": ""
-  },
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false
+  "zipCompressJs": true
 }

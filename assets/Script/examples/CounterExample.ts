@@ -1,4 +1,3 @@
-import { Type, TypeUnit, ActionUnit, Action } from "../basic/Types";
 import { BehaviorSubject } from "rxjs";
 import { __, add, always } from "ramda"
 import { modify } from "../basic/BaseFunction";
@@ -11,9 +10,9 @@ interface State {
 }
 
 type Action 
-    = TypeUnit<"Inc">
-    | TypeUnit<"Dec"> 
-    | Type<"Set", number>
+    = ["Inc"]
+    | ["Dec"] 
+    | ["Set", number]
 
 @ccclass
 export class CounterExample extends BaseComponent<State, Action> {
@@ -29,9 +28,9 @@ export class CounterExample extends BaseComponent<State, Action> {
     readonly MAX_SIZE = 999;
 
     start () {
-        this.onTouchEnd(this.minusButton.node, ActionUnit("Dec"));
-        this.onTouchEnd(this.plusButton.node, ActionUnit("Inc"));
-        this.onTouchEnd(this.maxButton.node, Action("Set", this.MAX_SIZE));
+        this.onTouchEnd(this.minusButton.node, ["Dec"]);
+        this.onTouchEnd(this.plusButton.node, ["Inc"]);
+        this.onTouchEnd(this.maxButton.node, ["Set", this.MAX_SIZE]);
         this.state = {
             count: new BehaviorSubject<number>(200)
         };
@@ -45,7 +44,7 @@ export class CounterExample extends BaseComponent<State, Action> {
     }
 
     eval (action: Action) {
-        switch (action.typeName) {
+        switch (action[0]) {
             case "Dec": {
                 let count = this.state.count.getValue();
                 if (count > 0) {
@@ -61,7 +60,7 @@ export class CounterExample extends BaseComponent<State, Action> {
                 break;
             }
             case "Set": {
-                modify(this.state.count, always(action.value));
+                modify(this.state.count, always(action[1]));
                 break;
             }
         }

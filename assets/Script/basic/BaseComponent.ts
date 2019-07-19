@@ -1,5 +1,5 @@
 import { Component } from "./Component";
-import { Fn, Type, Effect, Unit } from "./Types";
+import { Fn, Effect } from "./Types";
 import { TOUCH_END } from "./Constants";
 import { GlobalEnv } from "./GlobalEnv";
 import { GlobalAction } from "../core/GlobalAction";
@@ -7,7 +7,7 @@ import { Maybe } from "./Maybe";
 import { Subscription } from "rxjs";
 
 
-export abstract class BaseComponent<State, Action extends Type<any, any>> extends cc.Component implements Component<State, Action> {
+export abstract class BaseComponent<State, Action> extends cc.Component implements Component<State, Action> {
     state: State;
     subs: Array<Subscription> = [];
 
