@@ -2,6 +2,92 @@
 
 仿照Elm, Halogen那样抽象事件，数据和渲染。
 
+### :coffee:新版本预览
+- 使用mobx管理状态, 感觉比rxjs更舒服好用, 
+- 自己定义action配合ramda 更新状态 嗯姆
+```typescript
+import { modify, TimeInfo, timeInfo, formatNum } from "../basic/BaseFunction";
+import { BaseComponent } from "../basic/BaseComponent";
+import {max, subtract, pipe, min, add, __} from "ramda";
+
+import { observable, autorun, computed } from "mobx";
+
+const {ccclass, property} = cc._decorator
+
+class State {
+    @observable
+    count: number = 0;
+
+    @observable
+    timestamp: number = Date.now();
+
+    @computed
+    get time() {
+        return timeInfo(this.timestamp);
+    } 
+}
+
+type Action 
+    = ["Inc"]
+    | ["Dec"] 
+    | ["Set", number]
+    
+
+@ccclass
+export class CounterExample extends BaseComponent<State, Action> {
+    @property(cc.Button)
+    minusButton: cc.Button = null;
+    @property(cc.Button)
+    plusButton: cc.Button = null;
+    @property(cc.Label)
+    contentLabel: cc.Label = null;
+    @property(cc.Label)
+    timeLabel: cc.Label = null;
+    @property(cc.Button)
+    maxButton: cc.Button = null;
+
+    readonly MAX_SIZE = 999;
+
+    start () {
+        this.onTouchEnd(this.minusButton.node, ["Dec"]);
+        this.onTouchEnd(this.plusButton.node, ["Inc"]);
+        this.onTouchEnd(this.maxButton.node, ["Set", this.MAX_SIZE]);
+        this.state = new State();
+        this.subs = [
+            autorun(() => this.renderCounter(this.state.count)),
+            autorun(() => this.renderTimeInfo(this.state.time))
+        ]
+        this.schedule(() => this.setState({"timestamp": Date.now()}), 1);
+    }
+
+    eval (action: Action) {
+        switch (action[0]) {
+            case "Dec": {
+                this.modify({"count": pipe(subtract(__, 1), max(0))})
+                break;
+            }
+            case "Inc": {
+                this.modify({"count": pipe(add(1), min(this.MAX_SIZE))});
+                break;
+            }
+            case "Set": {
+                this.setState({"count": action[1]});
+                break;
+            }
+        }
+    }
+
+    renderTimeInfo(ti: TimeInfo) {
+        this.timeLabel.string = `${formatNum(ti.hour, 2)}:${formatNum(ti.minute, 2)}:${formatNum(ti.seconds, 2)}`;
+    }
+
+    renderCounter(count: number) {
+        this.contentLabel.string = String(count);
+    }
+}
+
+```
+
 
 ### 更新 07.08
 **1. 添加subs**   
