@@ -2,6 +2,15 @@
 
 仿照Elm, Halogen那样抽象事件，数据和渲染。
 
+### mobx + cocos2d 2.4.3
+[Mobx + Cocos2d](https://github.com/ustchcl/mobx-cocos2d)
+加了一个todo样例
+1. Diff示例, list的数据渲染
+2. Action State Props细化
+3. 父子组件交互问题
+
+
+
 ### :coffee:新版本预览
 - 使用mobx管理状态, 感觉比rxjs更舒服好用, 
 - 自己定义action配合ramda 更新状态 嗯姆
